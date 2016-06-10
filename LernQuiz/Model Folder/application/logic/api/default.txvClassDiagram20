@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V1hexuhiol9whvq5yfoxl">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Observer">
+			<property name="bounds" value="315,75,108,83"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:e_tsig:src:application.logic.api.Observer:e_class">
+				<property name="bounds" value="88,-12,40,25"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Subject">
+			<property name="bounds" value="15,15,141,121"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_tsig:src:application.logic.api.Subject:e_class">
+				<property name="bounds" value="121,-12,40,25"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.State">
+			<property name="bounds" value="327,195,82,80"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

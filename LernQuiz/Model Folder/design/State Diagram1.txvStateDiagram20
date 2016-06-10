@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V-d9nhuoip5hsaytnvd3ro">
+		<property name="$metaclass" value="StateDiagram20"/>
+		<property name="$name" value="State Diagram1"/>
+		<reference referencedUin="design:node:::j8ctxyip5hslru6e7aqu">
+			<property name="bounds" value="175,95,300,150"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<reference referencedUin="design:node:::-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu">
+				<property name="bounds" value="0,0,298,124"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>
