@@ -759,10 +759,126 @@
 	</node>
 	<node uin="j8ctxyip5hslru6e7aqu">
 		<property name="$metaclass" value="StateMachine"/>
-		<property name="$name" value="StateMachine1"/>
+		<property name="$name" value="Spielzug Automat"/>
 		<node uin="-acitv2ip5hslrv-qqhmmz">
 			<property name="$metaclass" value="Region20"/>
 			<property name="$name" value="Region20"/>
+			<node uin="-3uf15dip9syg2crzgbql">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="move not allowed"/>
+				<node uin="-acitv2ip9syg2cgs8zbu">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rip9t0b6eqo0mhq">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dip9syg2crzgbql:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sgfwdaxyqqe:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="k9ofrlip9sgb9e-43uo6s">
+				<property name="$metaclass" value="PseudoState20"/>
+				<property name="$name" value="Initial1"/>
+				<property name="$kind" value="initial"/>
+				<link uin="ieje0rip9sippx-posun8">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::k9ofrlip9sgb9e-43uo6s:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sgfwdaxyqqe:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dip9sgfwdaxyqqe">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="trow dice"/>
+				<node uin="-acitv2ip9sgfwe-c8ab6h">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rip9sis03-x9nlj4">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="rollDice()"/>
+					<participant referencedUin="design:node:::-3uf15dip9sgfwdaxyqqe:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dip9sh4lh-wznbq9">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="thrown"/>
+				<node uin="-acitv2ip9sh4li8oa5dh">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rip9skk1n-71aage">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="rollDice() [figuresInStash==3 &amp;&amp; trows&lt;=2 &amp;&amp; dice!=6] /trows++"/>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rip9snyq2-mi8o5a">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="newToken() [ dice==6 &amp;&amp; figuresInStash&gt;0 &amp;&amp; startFieldFree]"/>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9si08aecf2q0:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rip9sttdo-qhnaxv">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="moveToken() [destinationFree &amp;&amp; figuresInStash&lt;3] /possibleFields"/>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sibta6bi30f:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rip9szers-wbkyfb">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9syg2crzgbql:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+				<link uin="ieje0rip9t6bzm-li5yfh">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="switchPlayer()"/>
+					<participant referencedUin="design:node:::-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sgfwdaxyqqe:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dip9si08aecf2q0">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="new Token"/>
+				<node uin="-acitv2ip9si08c6pxq4q">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rip9t4zdx-a8jgy4">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="switchPlayer()"/>
+					<participant referencedUin="design:node:::-3uf15dip9si08aecf2q0:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sgfwdaxyqqe:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dip9sibta6bi30f">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="move allowed"/>
+				<node uin="-acitv2ip9sibtbuv7p4s">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rip9t0joo-6ezs0j">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="confirmToken() [validInput]"/>
+					<participant referencedUin="design:node:::-3uf15dip9sibta6bi30f:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9siirbjqnqlo:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
+			<node uin="-3uf15dip9siirbjqnqlo">
+				<property name="$metaclass" value="State20"/>
+				<property name="$name" value="move confirmed"/>
+				<node uin="-acitv2ip9siird-shrcwz">
+					<property name="$metaclass" value="Region20"/>
+					<property name="$name" value="Region20"/>
+				</node>
+				<link uin="ieje0rip9t4sfv-by112q">
+					<property name="$metaclass" value="TransitionLink20"/>
+					<property name="label" value="switchPlayer()"/>
+					<participant referencedUin="design:node:::-3uf15dip9siirbjqnqlo:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Client"></participant>
+					<participant referencedUin="design:node:::-3uf15dip9sgfwdaxyqqe:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu" role="Supplier"></participant>
+				</link>
+			</node>
 		</node>
 	</node>
 </nodeSet>
