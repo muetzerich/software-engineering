@@ -10,10 +10,6 @@
 			<property name="bounds" value="375,335,87,123"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
-		<reference referencedUin="design:view:::V1hexuhiolib8qm-mvm6s3">
-			<property name="bounds" value="5,5,168,75"/>
-			<property name="location_set_by_user" value="true"/>
-		</reference>
 		<reference referencedUin="jdt:e_class:src:application.logic.APIFactory">
 			<property name="bounds" value="377,-4,200,125"/>
 			<property name="location_set_by_user" value="true"/>

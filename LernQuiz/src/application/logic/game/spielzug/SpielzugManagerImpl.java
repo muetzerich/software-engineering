@@ -1,4 +1,4 @@
-package application.logic.spielzug;
+package application.logic.game.spielzug;
 import application.logic.StateImpl.StateType;
 import java.util.Random;
 
