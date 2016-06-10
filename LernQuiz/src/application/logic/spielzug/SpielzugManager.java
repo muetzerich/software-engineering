@@ -2,5 +2,6 @@ package application.logic.spielzug;
 import application.logic.StateImpl.StateType;
 
 public interface SpielzugManager {
-	StateType wuerfeln();
+	StateType rollDice();
+	StateType moveFigure();
 }

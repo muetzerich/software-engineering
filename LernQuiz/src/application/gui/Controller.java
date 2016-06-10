@@ -29,7 +29,6 @@ class Controller implements Observer<StateType>{
 		this.model = m;
 		this.model.attach(this);
 	}
-	;
 
 	private void getInput() {
 		String str = new String();
