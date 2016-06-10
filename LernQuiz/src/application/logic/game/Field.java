@@ -4,18 +4,14 @@ public class Field {
 	
 	public static final int FIELD_SIZE = 48;
 	
-	Token[] field = new Token[FIELD_SIZE];
-	
-	Field(){
-		//NOP
-	}
+	private Token[] field = new Token[FIELD_SIZE];
 	
 	/**
 	 * 
 	 * @param token the actual player token
 	 * @param dest destination on field
 	 * @return true if token moved to field else false
-	 */
+	 */ 
 	boolean moveTokenOnField(Token playerToken, int dest){
 		if(dest > FIELD_SIZE || dest < 0 || this.field[dest] != null){
 			return false;
@@ -23,6 +19,10 @@ public class Field {
 			this.field[dest] = playerToken;
 			return true;
 		}
+	}
+	
+	boolean isPossible(int field){
+		return this.field[field] != null;
 	}
 }
 

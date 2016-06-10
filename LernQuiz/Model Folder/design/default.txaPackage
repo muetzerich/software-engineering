@@ -447,6 +447,11 @@
 				<participant referencedUin="design:node:::a6k48riovij2iirnrz67:-46k66riovifomqtwguge" role="Client"></participant>
 				<participant referencedUin="design:node:::l7v8cip9mlwf88h8qoj:-46k66riovifomqtwguge" role="Supplier"></participant>
 			</link>
+			<link uin="ieje0rip9s9r5f-jibgyw">
+				<property name="$metaclass" value="containedNode"/>
+				<participant referencedUin="design:node:::a6k48riovij2iirnrz67:-46k66riovifomqtwguge" role="Client"></participant>
+				<participant referencedUin="design:node:::sbhn20ip9s9r5e-w7sxlk:-46k66riovifomqtwguge" role="Supplier"></participant>
+			</link>
 		</node>
 		<node uin="a6k48riovii4l612idb4">
 			<property name="$metaclass" value="ActivityPartition"/>
@@ -514,7 +519,7 @@
 				<property name="$metaclass" value="ControlFlow20"/>
 				<property name="label" value="nein (V=0)"/>
 				<participant referencedUin="design:node:::l7v8ciovj4mqxcjdhqy:-46k66riovifomqtwguge" role="Client"></participant>
-				<participant referencedUin="design:node:::sbhn20iovje30xcecebn:-46k66riovifomqtwguge" role="Supplier"></participant>
+				<participant referencedUin="design:node:::sbhn20ip9s9r5e-w7sxlk:-46k66riovifomqtwguge" role="Supplier"></participant>
 			</link>
 		</node>
 		<node uin="l7v8ciovj940a9wbrkg">
@@ -672,7 +677,7 @@
 				<property name="$metaclass" value="ControlFlow20"/>
 				<property name="label" value="nein (V&lt;3)"/>
 				<participant referencedUin="design:node:::l7v8cip9mhm3n-v6hxsm:-46k66riovifomqtwguge" role="Client"></participant>
-				<participant referencedUin="design:node:::-qbjze4iovj1502nxtqh5:-46k66riovifomqtwguge" role="Supplier"></participant>
+				<participant referencedUin="design:node:::sbhn20ip9s9r5e-w7sxlk:-46k66riovifomqtwguge" role="Supplier"></participant>
 			</link>
 		</node>
 		<node uin="l7v8cip9mlwf88h8qoj">
@@ -688,6 +693,15 @@
 				<property name="label" value="&lt;3"/>
 				<participant referencedUin="design:node:::l7v8cip9mlwf88h8qoj:-46k66riovifomqtwguge" role="Client"></participant>
 				<participant referencedUin="design:node:::-qbjze4ip9m61fnsm1pz2:-46k66riovifomqtwguge" role="Supplier"></participant>
+			</link>
+		</node>
+		<node uin="sbhn20ip9s9r5e-w7sxlk">
+			<property name="$metaclass" value="MergeNode20"/>
+			<property name="$name" value="MergeNode20"/>
+			<link uin="ieje0rip9sbif6-6ady2j">
+				<property name="$metaclass" value="ControlFlow20"/>
+				<participant referencedUin="design:node:::sbhn20ip9s9r5e-w7sxlk:-46k66riovifomqtwguge" role="Client"></participant>
+				<participant referencedUin="design:node:::-qbjze4iovj1502nxtqh5:-46k66riovifomqtwguge" role="Supplier"></participant>
 			</link>
 		</node>
 	</node>

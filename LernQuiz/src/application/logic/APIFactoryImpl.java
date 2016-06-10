@@ -2,8 +2,8 @@ package application.logic;
 
 import application.logic.api.Model;
 import application.logic.ModelImpl;
-import application.logic.spielzug.SpielzugManager;
-import application.logic.spielzug.SpielzugManagerImpl;
+import application.logic.game.spielzug.SpielzugManager;
+import application.logic.game.spielzug.SpielzugManagerImpl;
 
 public class APIFactoryImpl implements APIFactory {
 
@@ -28,7 +28,7 @@ public class APIFactoryImpl implements APIFactory {
 		return theFactory;
 	}
 
-	public SpielzugManager getSpielzugManager() {
+	public SpielzugManagerImpl getSpielzugManager() {
 		if (this.spielzugManager == null) {
 			 this.spielzugManager = new SpielzugManagerImpl();
 		}

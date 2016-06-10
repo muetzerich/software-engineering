@@ -1,7 +1,7 @@
 package application.logic;
 
 import application.logic.api.Model;
-import application.logic.spielzug.SpielzugManager;
+import application.logic.game.spielzug.SpielzugManager;
 
 public interface APIFactory {
 

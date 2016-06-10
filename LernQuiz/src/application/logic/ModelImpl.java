@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import application.logic.StateImpl.StateType;
 import application.logic.api.Model;
 import application.logic.api.Observer;
-import application.logic.api.State;
-import application.logic.spielzug.SpielzugManagerImpl;
+import application.logic.game.spielzug.SpielzugManagerImpl;
 
 public  class ModelImpl implements Model {
 	
@@ -15,13 +14,14 @@ public  class ModelImpl implements Model {
 	private StateType currentState;
 	SpielzugManagerImpl spielzugManager;
 
+	//TODO ist das hier die FASSADE / MUSS HIER NOTIFY vom Subject aufgerufen werden?
 
 	public int getGewuerfelteZahl() {
 		return this.spielzugManager.getGewuerfelteZahl();
 	}
 	
 	ModelImpl(APIFactoryImpl factory) {
-		this.factory = factory;
+		this.spielzugManager = factory.getSpielzugManager();
 	}
 
 	public void detach(Observer<StateType> obs) {

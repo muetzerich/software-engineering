@@ -28,5 +28,5 @@ public class Game {
 			newIndex = 0;
 		}
 		this.currentPlayer = this.players.get(newIndex);
-	}
+	}	
 }

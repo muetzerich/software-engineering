@@ -12,7 +12,7 @@ public class SpielzugManagerImpl implements SpielzugManager {
 	public int getGewuerfelteZahl() {
 		return gewuerfelteZahl;
 	}
-
+	
 
 	public StateType rollDice() {
 		this.gewuerfelteZahl = rand.nextInt(6)+1;
