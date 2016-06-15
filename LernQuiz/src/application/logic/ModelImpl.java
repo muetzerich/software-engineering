@@ -1,12 +1,12 @@
 package application.logic;
 
 import java.util.ArrayList;
-
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+import java.util.List;
 
 import application.logic.StateImpl.StateType;
 import application.logic.api.Model;
 import application.logic.api.Observer;
+import application.logic.game.Player;
 import application.logic.game.spielzug.SpielzugManager;
 
 public class ModelImpl implements Model {
@@ -14,25 +14,24 @@ public class ModelImpl implements Model {
 	private ArrayList<Observer<StateType>> observers = new ArrayList<Observer<StateType>>();
 	private APIFactoryImpl factory;
 	private StateType currentState;
-	SpielzugManager spielzugManager;
+	private SpielzugManager spielzugManager;
 
 	//Hier ist die Facade
 
 	public ModelImpl(APIFactoryImpl factory) {
 		this.factory = factory;
-		
+
 	}
-	
+
 	void start() {
-		System.out.print("start model");
 		this.currentState = StateType.THROW_DICE;
 		this.spielzugManager = this.factory.getSpielzugManager();
 	}
-	
+
 	public int getGewuerfelteZahl() {
 		return this.spielzugManager.getCurrentPips();
 	}
-	
+
 	public void detach(Observer<StateType> obs) {
 		this.observers.remove(obs);
 	}
@@ -42,13 +41,25 @@ public class ModelImpl implements Model {
 		obs.update(this.currentState);
 	}
 
+	public void moveFigure(String figureName){
+		StateType newState;
+		if(this.currentState == StateType.MOVE_TOKEN){
+			this.spielzugManager.moveFigure();
+		} else {
+			this.setState(this.currentState);
+		}
+	}
+
 
 	public void rollDice() {
-		if(this.currentState == StateType.THROW_DICE){
-			StateType newState = this.spielzugManager.rollDice();
-			this.setState(newState);
+		StateType newState;
+		if(this.currentState == StateType.THROW_AGAIN 
+				|| this.currentState == StateType.THROW_DICE 
+				|| this.currentState == StateType.NO_START_MOVE 
+				|| this.currentState == StateType.NEW_TOKEN){
+			newState = this.spielzugManager.throwDice();
+				this.setState(newState);
 		} else {
-			//Falls Fehleingabe dann setze erneut current State
 			this.setState(this.currentState);
 		}
 	}
@@ -77,14 +88,19 @@ public class ModelImpl implements Model {
 			obs.update(this.currentState);
 	}
 
-	public StateType getCurrentState() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public int getCurrentPips() {
 		return this.spielzugManager.getCurrentPips();
 	}
 
+	public int numberOfThrowsLeft() {
+		return this.spielzugManager.numberOfThrowsLeft();
+	}
 
+	public List<Player> getPlayers() {
+		return this.spielzugManager.getPlayers();
+	}
+
+	public Player getCurrentPlayer() {
+		return this.spielzugManager.getCurrentPlayer();
+	}
 }

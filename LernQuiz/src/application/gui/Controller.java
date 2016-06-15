@@ -22,7 +22,6 @@ public class Controller implements Observer<StateType>{
 	public Controller(Model model, View view) {
 		this.call.put("w", 1);
 		this.call.put("b", 2);
-		this.call.put("f", 3);
 		this.model = model;
 		this.view = view;
 	}
@@ -32,34 +31,53 @@ public class Controller implements Observer<StateType>{
 		while (true) {	
 			try {
 				sem.acquire();
+				this.call();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			try{
-				BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-				str = in.readLine();
-			}
-			catch(IOException e){}
-			int i = (this.call.get(str) != null ? this.call.get(str): 0);
-			switch (i) {
-			case 1: {
-				new Thread(){
-					public void run(){
-						System.out.println("Thread: " + getName() + " running");
-						model.rollDice();
-					}
-				}.start();	
-			};
-			break;
-			default:
-				this.update(StateType.ERROR);
-				break;
-			}
-
-			
 		}
 	}
-	
+
+	private void call(){
+		String str = new String();
+		try{
+			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+			str = in.readLine();
+		}
+		catch(IOException e){}
+		int i = (this.call.get(str) != null ? this.call.get(str): 0);
+		switch (i) {
+		case 1: {
+			new Thread(){
+				public void run(){
+					System.out.println("Thread: " + getName() + " running");
+					model.rollDice();
+				}
+			}.start();	
+		};
+		break;
+		case 2: {
+			new Thread(){
+				public void run(){
+					System.out.println("Thread: " + getName() + " running");
+					String input = new String();
+					try{
+						BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+						input = in.readLine();
+					}
+					catch(IOException e){}
+					model.moveFigure(input);
+				}
+			}.start();	
+		};
+		break;
+		default:
+			this.update(StateType.ERROR);
+			break;
+		}
+
+	}
+
 	public void run(){
 		this.model.attach(this);
 		this.getInput();
@@ -73,19 +91,32 @@ public class Controller implements Observer<StateType>{
 		System.out.println("Update:  state changed to : " + state);
 		switch(state){
 		case THROW_DICE:
+			view.getOutputStatus();
 			view.getOutputRollDice();
 			break;
-		case THROWN:
+		case THROW_AGAIN:
 			view.getOutputThrownDice();
+			view.getOutputRollDiceAgain();
+			view.getOutputRollDice();
+			break;
+		case NO_START_MOVE:
+			view.getOutputSorryMessage();
+			view.getOutputStatus();
+			view.getOutputRollDice();
 			break;
 		case NEW_TOKEN:
+			view.getOutputStatus();
+			view.getOutputMoveToken();
+			view.getOutputRollDice();
 			break;
 		case MOVE_NOT_ALLOWED:
 			break;
 		case MOVE_TOKEN:
 			break;
 		default:
-			//ERROR state
+			view.getOutputInvalidInput();
+			view.getOutputStatus();
+			view.getOutputRollDice();
 			break;
 		}
 		sem.release();

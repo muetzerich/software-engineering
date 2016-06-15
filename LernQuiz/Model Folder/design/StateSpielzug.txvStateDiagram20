@@ -24,8 +24,8 @@
 						<property name="smooth_bendpoints" value="710,380"/>
 						<property name="location_set_by_user" value="true"/>
 						<reference referencedUin="label:label:design:link:::ieje0rip9snyq2-mi8o5a:-3uf15dip9sh4lh-wznbq9:-acitv2ip5hslrv-qqhmmz:j8ctxyip5hslru6e7aqu">
-							<property name="bounds" value="719,342,374,60"/>
-							<property name="weight" value="0.21535181236673773"/>
+							<property name="bounds" value="720,339,374,60"/>
+							<property name="weight" value="0.208955223880597"/>
 							<property name="bounds_setted_by_user" value="true"/>
 							<property name="location_set_by_user" value="true"/>
 						</reference>

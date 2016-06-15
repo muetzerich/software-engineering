@@ -6,10 +6,10 @@
 		<property name="$defaultDiagram" value="true"/>
 		<property name="$metaclass" value="ClassDiagram20"/>
 		<reference referencedUin="jdt:e_class:src:application.logic.api.Observer">
-			<property name="bounds" value="315,75,108,83"/>
+			<property name="bounds" value="315,75,113,83"/>
 			<property name="location_set_by_user" value="true"/>
 			<reference referencedUin="jdt:e_tsig:src:application.logic.api.Observer:e_class">
-				<property name="bounds" value="88,-12,40,25"/>
+				<property name="bounds" value="93,-12,40,25"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:application.logic.api.Subject">
@@ -22,6 +22,26 @@
 		</reference>
 		<reference referencedUin="jdt:e_class:src:application.logic.api.State">
 			<property name="bounds" value="327,195,82,80"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Model">
+			<property name="bounds" value="5,5,195,169"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:application.logic.api.Model:Subject&lt;StateType&gt;">
+				<property name="sourceAnchor" value="90,10"/>
+				<property name="targetAnchor" value="90,20"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Token">
+			<property name="bounds" value="219,-4,163,94"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.System">
+			<property name="bounds" value="119,193,200,94"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Player">
+			<property name="bounds" value="466,-4,200,109"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
 	</view>

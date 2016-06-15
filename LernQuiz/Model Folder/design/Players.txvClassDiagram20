@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V1hexuhiph01poioxiz1l">
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<property name="$name" value="Players"/>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Player">
+			<property name="bounds" value="355,302,200,288"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<reference referencedUin="jdt:l_impl:src:application.logic.game.Player:application.logic.api.Player">
+				<property name="sourceAnchor" value="436,307"/>
+				<property name="targetAnchor" value="436,194"/>
+				<property name="bendpoints" value=""/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>
