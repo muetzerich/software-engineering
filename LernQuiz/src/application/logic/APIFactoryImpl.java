@@ -1,37 +1,46 @@
 package application.logic;
 
 import application.logic.api.Model;
-import application.logic.ModelImpl;
 import application.logic.game.spielzug.SpielzugManager;
 import application.logic.game.spielzug.SpielzugManagerImpl;
+
 
 public class APIFactoryImpl implements APIFactory {
 
 	private static APIFactoryImpl theFactory;
-	private ModelImpl model;
-	private SpielzugManagerImpl spielzugManager;
+	private ModelImpl modelImpl;
+	private SpielzugManagerImpl spielzugManagerImpl;
 
-	private APIFactoryImpl() {
-	}
+	private APIFactoryImpl() {};
 
 	public Model getModel() {
-		if (this.model == null) {
-			 this.model = new ModelImpl(this);
-		}
-		return this.model;
+		return this.getModelImpl();
 	}
 
-	public static APIFactory makeFactory() {
-		if (theFactory == null) {
-			theFactory = new APIFactoryImpl();
-		}
-		return theFactory;
+	public SpielzugManager getSpielzugManager() {
+		return this.getSpielzugManagerImpl();
+
 	}
 
-	public SpielzugManagerImpl getSpielzugManager() {
-		if (this.spielzugManager == null) {
-			 this.spielzugManager = new SpielzugManagerImpl();
+	private ModelImpl getModelImpl() {
+		if (this.modelImpl == null) {
+			this.modelImpl = new ModelImpl(this);
+			this.modelImpl.start();
 		}
-		return this.spielzugManager;
+		return this.modelImpl;
+	}
+
+	static APIFactory makeFactory() {
+		if (APIFactoryImpl.theFactory == null) {
+			APIFactoryImpl.theFactory = new APIFactoryImpl();
+		}
+		return APIFactoryImpl.theFactory;
+	}
+
+	private SpielzugManager getSpielzugManagerImpl() {
+		if (this.spielzugManagerImpl == null) {
+			this.spielzugManagerImpl = new SpielzugManagerImpl();
+		}
+		return this.spielzugManagerImpl;
 	}
 }

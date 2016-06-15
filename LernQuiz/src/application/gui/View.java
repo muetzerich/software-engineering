@@ -1,21 +1,51 @@
 package application.gui;
 
-import java.util.concurrent.Semaphore;
+import application.logic.api.Model;
 
-import application.logic.StateImpl.StateType;
-import application.logic.api.Observer;
+public class View {
 
-public class View implements Observer<StateType> {
-	
-	private Controller controller;
-	private Semaphore sem = new Semaphore(0);
-	
-	public View(Controller controller){
-		
+	Model model;
+
+	public View(Model model){
+		this.model = model;
 	}
 
-	public void update(StateType state) {
-		// TODO Auto-generated method stub
-		
+	public void getOutputRollDice(){
+		System.out.println("Bitte Würfeln.");
+		System.out.println("Zum Würfeln bitte w eingeben.");
+	}
+	
+	public void getOutputThrownDice(){
+		System.out.println("Du hast eine"+this.model.getCurrentPips()+"gewürfelt.");
+		System.out.println("Zum Würfeln bitte w eingeben.");
+	}
+	
+
+	public void getOutputStatus(){
+		System.out.println("Status");
+	}
+
+	public void getOutputMoveToken(){
+		System.out.println("Move Token");
+	}
+
+	public void getOutputRollDiceAgain(){
+
+		//Konsolenausgabe hier
+	}
+
+	public void getOutputNewToken(){
+
+		//Konsolenausgabe hier
+	}
+
+	public void getOutputInvalidInput(){
+
+		//Konsolenausgabe hier
+	}
+
+	public void getOutputMoveImpossible(){
+
+		//Konsolenausgabe hier
 	}
 }

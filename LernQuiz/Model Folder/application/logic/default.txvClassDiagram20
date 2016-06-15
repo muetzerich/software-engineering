@@ -38,14 +38,6 @@
 				<property name="targetAnchor" value="210,132"/>
 			</reference>
 		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.ModelImpl">
-			<property name="bounds" value="5,5,200,212"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.ModelImpl:factory">
-				<property name="sourceAnchor" value="210,135"/>
-				<property name="targetAnchor" value="382,194"/>
-			</reference>
-		</reference>
 		<reference referencedUin="jdt:e_class:src:application.logic.StateImpl">
 		</reference>
 	</view>

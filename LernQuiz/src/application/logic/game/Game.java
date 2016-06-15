@@ -8,9 +8,10 @@ public class Game {
 	private List<Player> players;
 	private Player currentPlayer;
 	
-	Game(int numberOfPlayers){
+	Game(){
 		this.players = new ArrayList<Player>();
 		
+		//Fix 4 Players
 		this.players.add(new Player("blue"));
 		this.players.add(new Player("green"));
 		this.players.add(new Player("red"));
@@ -21,7 +22,7 @@ public class Game {
 		return this.currentPlayer;
 	}
 	
-	public void setCurrentPlayer(){
+	public void setNextPlayer(){
 		int indexOFCurrentPlayer = this.players.indexOf(this.currentPlayer);
 		int newIndex = indexOFCurrentPlayer++;
 		if(newIndex > players.size()){

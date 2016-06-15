@@ -1,30 +1,32 @@
 package application.logic.game.spielzug;
 import application.logic.StateImpl.StateType;
+import application.logic.game.Dice;
+
 import java.util.Random;
 
 
 public class SpielzugManagerImpl implements SpielzugManager {
 	
-	private Random rand = new Random();
-	private int gewuerfelteZahl;
+	private Dice dice;
 	
-
-	public int getGewuerfelteZahl() {
-		return gewuerfelteZahl;
+	public SpielzugManagerImpl(){
+		this.dice = new Dice();
+		System.out.println("SpielzugManager was created");
 	}
-	
 
 	public StateType rollDice() {
-		this.gewuerfelteZahl = rand.nextInt(6)+1;
-		if (gewuerfelteZahl == 6){
-			return null; //TODO 
+		this.dice.rollDice();
+		if (this.getCurrentPips() == 6){
+			return StateType.THROWN; //TODO 
 		}
-		else return StateType.WUERFELN;
+		else return StateType.THROW_DICE;
 	} 
 	
 	public StateType moveFigure() {
 		return null;
 	}
-	
-	
+
+	public int getCurrentPips() {
+		return this.dice.getcurrentPips();
+	}
 }

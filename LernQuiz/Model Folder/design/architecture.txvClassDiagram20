@@ -20,25 +20,10 @@
 				<property name="sourceAnchor" value="-122,268"/>
 				<property name="targetAnchor" value="-122,327"/>
 			</reference>
-			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:model">
+			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:modelImpl">
 				<property name="sourceAnchor" value="21,198"/>
 				<property name="targetAnchor" value="98,198"/>
 				<property name="location_set_by_user" value="true"/>
-			</reference>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.ModelImpl">
-			<property name="bounds" value="93,80,243,206"/>
-			<property name="location_set_by_user" value="true"/>
-			<property name="$shortcutReference" value="true"/>
-			<property name="bounds_setted_by_user" value="true"/>
-			<reference referencedUin="jdt:l_impl:src:application.logic.ModelImpl:Model">
-				<property name="sourceAnchor" value="210,120"/>
-				<property name="targetAnchor" value="400,120"/>
-				<property name="location_set_by_user" value="true"/>
-			</reference>
-			<reference referencedUin="jdt:l_ast:src:application.logic.ModelImpl:factory">
-				<property name="sourceAnchor" value="98,152"/>
-				<property name="targetAnchor" value="21,152"/>
 			</reference>
 		</reference>
 		<reference referencedUin="jdt:e_class:src:application.logic.APIFactory">
