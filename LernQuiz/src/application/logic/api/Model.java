@@ -1,7 +1,6 @@
 package application.logic.api;
 import java.util.List;
 import application.logic.game.Player;
-
 import application.logic.StateImpl.StateType;
 
 public interface Model extends Subject<StateType>{
@@ -11,4 +10,6 @@ public interface Model extends Subject<StateType>{
 	public int numberOfThrowsLeft();
 	public List<Player> getPlayers();
 	public Player getCurrentPlayer();
+	public Player getLastPlayer();
+	public List<application.logic.game.Token> getDrawableTokens(Player player, int dicePips);
 }

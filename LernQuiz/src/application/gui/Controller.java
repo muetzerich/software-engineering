@@ -21,7 +21,7 @@ public class Controller implements Observer<StateType>{
 
 	public Controller(Model model, View view) {
 		this.call.put("w", 1);
-		this.call.put("b", 2);
+		this.call.put("z", 2);
 		this.model = model;
 		this.view = view;
 	}
@@ -50,7 +50,7 @@ public class Controller implements Observer<StateType>{
 		case 1: {
 			new Thread(){
 				public void run(){
-					System.out.println("Thread: " + getName() + " running");
+					//System.out.println("Thread: " + getName() + " running");
 					model.rollDice();
 				}
 			}.start();	
@@ -59,8 +59,9 @@ public class Controller implements Observer<StateType>{
 		case 2: {
 			new Thread(){
 				public void run(){
-					System.out.println("Thread: " + getName() + " running");
+					//System.out.println("Thread: " + getName() + " running");
 					String input = new String();
+					view.getOutputMoveFigure();
 					try{
 						BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 						input = in.readLine();
@@ -75,7 +76,6 @@ public class Controller implements Observer<StateType>{
 			this.update(StateType.ERROR);
 			break;
 		}
-
 	}
 
 	public void run(){
@@ -105,13 +105,19 @@ public class Controller implements Observer<StateType>{
 			view.getOutputRollDice();
 			break;
 		case NEW_TOKEN:
+			view.getOutputMoveTokenToStartfield();
 			view.getOutputStatus();
-			view.getOutputMoveToken();
 			view.getOutputRollDice();
 			break;
 		case MOVE_NOT_ALLOWED:
 			break;
 		case MOVE_TOKEN:
+			view.getOutputChooseMoveFigure();
+			break;
+		case MOVED:
+			view.getOutputMovedFigure();
+			view.getOutputStatus();
+			view.getOutputRollDice();
 			break;
 		default:
 			view.getOutputInvalidInput();

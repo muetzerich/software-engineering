@@ -7,6 +7,7 @@ public class Game{
 	
 	private List<Player> players;
 	private Player currentPlayer;
+	private Player lastPlayer;
 	private Field field; 
 	
 	public Game(){
@@ -25,9 +26,14 @@ public class Game{
 		return this.currentPlayer;
 	}
 	
+	public Player getLastPlayer() {
+		return this.lastPlayer;
+	}
+	
 	public void setNextPlayer(){
 		int indexOFCurrentPlayer = this.players.indexOf(this.currentPlayer);
 		System.out.print("index of: "+indexOFCurrentPlayer);
+		this.lastPlayer =  this.players.get(indexOFCurrentPlayer);
 		int newIndex = indexOFCurrentPlayer +1;
 		if(newIndex >= players.size()){
 			newIndex = 0;

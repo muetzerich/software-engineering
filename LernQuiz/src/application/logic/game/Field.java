@@ -1,5 +1,8 @@
 package application.logic.game;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Field {
 	
 	public static final int FIELD_SIZE = 48;
@@ -14,14 +17,22 @@ public class Field {
 	 */ 
 	public boolean moveTokenOnField(Token playerToken, int dicePips){
 		int dest = dicePips + playerToken.getIndexOnField();
-		//TODO Fall wenn größer Field Size
-		if(dest > FIELD_SIZE || dest < 0 || this.field[dest] != null){
+		if(dest < 0 || this.field[dest] != null){
 			return false;
-		} else {
+		} else if(dest > FIELD_SIZE){
+			int newDest = dest-FIELD_SIZE;
+			playerToken.setIndexOnField(newDest);
+			this.field[newDest] = playerToken;
+			return true;
+		}else {
 			playerToken.setIndexOnField(dest);
 			this.field[dest] = playerToken;
 			return true;
 		}
+	}
+	
+	public void setPlayerOnStartfield(Player player,Token playerToken) {
+		this.field[player.getStartfield()] = playerToken;
 	}
 	
 	public boolean isStartFieldFree(Player player) {
@@ -36,11 +47,33 @@ public class Field {
 		boolean isPossible = false;
 		for (Token token : player.getTokensOnField()) {
 			int destination = token.getIndexOnField() + dicePips;
+			if(destination > FIELD_SIZE){
+				destination = destination-FIELD_SIZE;
 			if(this.field[destination]==null){
 				isPossible = true;
 			} 
 		}
+		}
 		return isPossible;
+	}
+	
+	public List<Token> getDrawableTokens(Player player,int dicePips) {
+		List<Token> drawableTokens = new ArrayList<Token>();
+		for (Token token: player.getTokensOnField()){
+			int destination = token.getIndexOnField() + dicePips;
+			if(this.field[destination]==null){
+				drawableTokens.add(token);
+			} 
+		}
+		return drawableTokens;
+	}
+	
+	public int calculateDestination(Token token,int dicePips) {
+		int destination = token.getIndexOnField() + dicePips;
+		if(destination > FIELD_SIZE){
+			destination= destination-FIELD_SIZE;
+		}
+		return destination;
 	}
 }
 

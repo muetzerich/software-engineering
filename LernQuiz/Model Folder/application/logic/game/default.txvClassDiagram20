@@ -41,10 +41,6 @@
 				<property name="sourceAnchor" value="380,184"/>
 				<property name="targetAnchor" value="380,368"/>
 			</reference>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:currentPlayer">
-				<property name="sourceAnchor" value="229,112"/>
-				<property name="targetAnchor" value="210,116"/>
-			</reference>
 			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:players">
 				<property name="sourceAnchor" value="228,110"/>
 				<property name="targetAnchor" value="210,113"/>
@@ -54,6 +50,10 @@
 				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:application.logic.game.Game:players">
 					<property name="bounds" value="210,-24,27,19"/>
 				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:lastPlayer">
+				<property name="sourceAnchor" value="229,112"/>
+				<property name="targetAnchor" value="210,116"/>
 			</reference>
 		</reference>
 	</view>

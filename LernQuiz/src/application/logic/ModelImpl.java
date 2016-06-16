@@ -7,6 +7,7 @@ import application.logic.StateImpl.StateType;
 import application.logic.api.Model;
 import application.logic.api.Observer;
 import application.logic.game.Player;
+import application.logic.game.Token;
 import application.logic.game.spielzug.SpielzugManager;
 
 public class ModelImpl implements Model {
@@ -41,10 +42,14 @@ public class ModelImpl implements Model {
 		obs.update(this.currentState);
 	}
 
+	/**
+	 * System Operation move Figure
+	 * Redirect to SpielzugManager and update current state.
+	 */
 	public void moveFigure(String figureName){
 		StateType newState;
 		if(this.currentState == StateType.MOVE_TOKEN){
-			this.spielzugManager.moveFigure();
+			this.spielzugManager.moveFigure(figureName);
 		} else {
 			this.setState(this.currentState);
 		}
@@ -64,19 +69,7 @@ public class ModelImpl implements Model {
 		}
 	}
 
-	/**
-	 * System Operation move Figure
-	 * Redirect to SpielzugManager and update current state.
-	 */
-	public void moveFigure(){
-		if(this.currentState == StateType.MOVE_TOKEN){
-			StateType newState = this.spielzugManager.moveFigure();
-			this.setState(newState);
-		} else {
-			//Falls Fehleingabe dann setze erneut current State
-			this.setState(this.currentState);
-		}
-	}
+	
 
 	/**
 	 * Set the current State and notify all observers.
@@ -102,5 +95,13 @@ public class ModelImpl implements Model {
 
 	public Player getCurrentPlayer() {
 		return this.spielzugManager.getCurrentPlayer();
+	}
+	
+	public List<Token> getDrawableTokens(Player player, int dicePips) {
+		return this.spielzugManager.getDrawableTokens(player, dicePips);
+	}
+	
+	public Player getLastPlayer() {
+		return this.spielzugManager.getLastPlayer();
 	}
 }

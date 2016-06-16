@@ -16,8 +16,10 @@ public class Token implements application.logic.api.Token{
 		return this.isInGame;
 	}
 	
-	public void setIsInGame(){
+	public int setIsInGame(int startfield){
 		this.isInGame = true;
+		this.indexOnField = startfield;
+		return this.indexInStore;
 	}
 
 	public int getIndexOnField() {
