@@ -75,10 +75,11 @@ public class Controller implements Observer<StateType>{
 		};
 		break;
 		default:
-			if(this.lastState == StateType.MOVE_TOKEN){
+			if(this.lastState == StateType.MOVE_TOKEN || this.lastState == StateType.ERROR_MOVE || this.lastState == StateType.MOVE_NOT_ALLOWED){
 				this.update(StateType.ERROR_MOVE);
+			}else {
+				this.update(StateType.ERROR);
 			}
-			this.update(StateType.ERROR);
 			break;
 		}
 	}

@@ -3,7 +3,6 @@ package application.gui;
 import application.logic.api.Model;
 import application.logic.api.Player;
 import application.logic.api.Token;
-//TODO interface
 
 public class View {
 
@@ -25,6 +24,7 @@ public class View {
 	public void getOutputMoveTokenToStartfield(){
 		System.out.println("Glückwunsch, du hast eine 6 gewürfelt! Deine Spielfigur "
 				+this.model.getLastPlayer().getColor()+this.model.getLastPlayer().getLastMovedToken() +" ist nun im Spiel");
+		System.out.println("--------------------------------------------------------------");
 	}
 	
 	public void getOutputRollDiceAgain(){
@@ -32,10 +32,6 @@ public class View {
 		System.out.println("--------------------------------------------------------------");
 	}
 	
-	public void getOutputNewToken(){
-
-	}
-
 	public void getOutputMoveFigure(){
 		System.out.println("Welche Spielfigur willst du bewegen?"); 
 		System.out.println("Du kannst folgende Figuren bewegen: ");
@@ -43,7 +39,7 @@ public class View {
 			System.out.println(this.model.getCurrentPlayer().getColor()+token.getIndex()+" --> " +this.model.calculateDestination(token, this.model.getCurrentPips()));
 
 		}
-		System.out.println("Bitte gebe den Namen der Figur ein und bestätige mit Enter");
+		System.out.println("Bitte gebe die Nummer der Figur ein und bestätige mit Enter");
 	}
 	
 	public void getOutputChooseMoveFigure() {

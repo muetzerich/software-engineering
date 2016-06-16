@@ -20,11 +20,13 @@ public class Field {
 		if(dest < 0 || this.field[dest] != null){
 			return false;
 		} else if(dest > FIELD_SIZE){
+			this.field[playerToken.getIndexOnField()] = null;
 			int newDest = dest-FIELD_SIZE;
 			playerToken.setIndexOnField(newDest);
 			this.field[newDest] = playerToken;
 			return true;
 		}else {
+			this.field[playerToken.getIndexOnField()] = null;
 			playerToken.setIndexOnField(dest);
 			this.field[dest] = playerToken;
 			return true;

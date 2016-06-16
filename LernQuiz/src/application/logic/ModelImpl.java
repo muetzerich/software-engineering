@@ -17,20 +17,13 @@ public class ModelImpl implements Model {
 	private StateType currentState;
 	private SpielzugManager spielzugManager;
 
-	//Hier ist die Facade
-
 	public ModelImpl(APIFactoryImpl factory) {
 		this.factory = factory;
-
 	}
 
 	void start() {
 		this.currentState = StateType.THROW_DICE;
 		this.spielzugManager = this.factory.getSpielzugManager();
-	}
-
-	public int getGewuerfelteZahl() {
-		return this.spielzugManager.getCurrentPips();
 	}
 
 	public void detach(Observer<StateType> obs) {
@@ -55,7 +48,10 @@ public class ModelImpl implements Model {
 			this.setState(this.currentState);
 		}
 	}
-
+	/**
+	 * System Operation roll Dice
+	 * Redirect to SpielzugManager and update current state.
+	 */
 	public void rollDice() {
 		StateType newState;
 		if(this.currentState == StateType.THROW_AGAIN 
@@ -64,7 +60,7 @@ public class ModelImpl implements Model {
 				|| this.currentState == StateType.NEW_TOKEN
 				|| this.currentState == StateType.MOVED){
 			newState = this.spielzugManager.throwDice();
-				this.setState(newState);
+			this.setState(newState);
 		} else {
 			this.setState(this.currentState);
 		}
@@ -78,6 +74,10 @@ public class ModelImpl implements Model {
 		this.currentState = state;
 		for (Observer<StateType> obs: this.observers)
 			obs.update(this.currentState);
+	}
+
+	public int getGewuerfelteZahl() {
+		return this.spielzugManager.getCurrentPips();
 	}
 
 	public int getCurrentPips() {
@@ -95,11 +95,11 @@ public class ModelImpl implements Model {
 	public Player getCurrentPlayer() {
 		return this.spielzugManager.getCurrentPlayer();
 	}
-	
+
 	public List<Token> getDrawableTokens(Player player, int dicePips) {
 		return this.spielzugManager.getDrawableTokens(player, dicePips);
 	}
-	
+
 	public Player getLastPlayer() {
 		return this.spielzugManager.getLastPlayer();
 	}
