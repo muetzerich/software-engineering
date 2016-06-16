@@ -49,10 +49,10 @@ public class Field {
 			int destination = token.getIndexOnField() + dicePips;
 			if(destination > FIELD_SIZE){
 				destination = destination-FIELD_SIZE;
+			}
 			if(this.field[destination]==null){
 				isPossible = true;
 			} 
-		}
 		}
 		return isPossible;
 	}
@@ -68,7 +68,7 @@ public class Field {
 		return drawableTokens;
 	}
 	
-	public int calculateDestination(Token token,int dicePips) {
+	public int calculateDestination(application.logic.api.Token token,int dicePips) {
 		int destination = token.getIndexOnField() + dicePips;
 		if(destination > FIELD_SIZE){
 			destination= destination-FIELD_SIZE;

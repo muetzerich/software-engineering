@@ -14,7 +14,7 @@ public class View {
 	}
 
 	public void getOutputRollDice(){
-		System.out.println("Bitte Würfeln.");
+		System.out.println("\nBitte Würfeln.");
 		System.out.println("Zum Würfeln bitte 'w' eingeben und mit Enter bestätigen.");
 	}
 
@@ -29,6 +29,7 @@ public class View {
 	
 	public void getOutputRollDiceAgain(){
 		System.out.println("Du hast keine 6 gewürfelt und darfst noch "+model.numberOfThrowsLeft()+"-mal nachwürfeln.");
+		System.out.println("--------------------------------------------------------------");
 	}
 	
 	public void getOutputNewToken(){
@@ -37,9 +38,9 @@ public class View {
 
 	public void getOutputMoveFigure(){
 		System.out.println("Welche Spielfigur willst du bewegen?"); 
-		System.out.println("Du kannst folgende Figuren bewegen: "+"[]");
+		System.out.println("Du kannst folgende Figuren bewegen: ");
 		for (Token token : model.getDrawableTokens(this.model.getCurrentPlayer(),this.model.getCurrentPips())) {
-			System.out.println(this.model.getCurrentPlayer().getColor()+token.getIndex()+" --> ");
+			System.out.println(this.model.getCurrentPlayer().getColor()+token.getIndex()+" --> " +this.model.calculateDestination(token, this.model.getCurrentPips()));
 
 		}
 		System.out.println("Bitte gebe den Namen der Figur ein und bestätige mit Enter");
@@ -52,15 +53,11 @@ public class View {
 
 	public void getOutputSorryMessage(){
 		System.out.println("Du hast leider 3-mal keine 6 gewürfelt.");
+		System.out.println("--------------------------------------------------------------");
 	}
 
 	public void getOutputInvalidInput(){
-		System.out.println("Deine Eingabe war ungültig. Bitte versuche es noch einmal.");
-	}
-
-	public void getOutputMoveImpossible(){
-
-		//Konsolenausgabe hier
+		System.out.println("Deine Eingabe war ungültig.\n Bitte versuche es noch einmal.");
 	}
 	
 	public void getOutputMovedFigure(){
@@ -69,7 +66,8 @@ public class View {
 
 	public void getOutputStatus() {
 		System.out.println("--------------------------------------------------------------");
-		System.out.println("Der Spieler "+ model.getCurrentPlayer().getColor()+" ist am Zug \n");
+		System.out.println("Der Spieler "+ model.getCurrentPlayer().getColor()+" ist am Zug");
+		System.out.println("--------------------------------------------------------------");
 		System.out.println("Status Spielfeld:");
 		for (Player player : model.getPlayers()) {
 			System.out.println(player.getColor()+"\t"+player.getNumberOfTokenInField()+ " von "+ player.getStoreSize() + " Figuren im Spiel: ");

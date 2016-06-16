@@ -32,13 +32,11 @@ public class Game{
 	
 	public void setNextPlayer(){
 		int indexOFCurrentPlayer = this.players.indexOf(this.currentPlayer);
-		System.out.print("index of: "+indexOFCurrentPlayer);
 		this.lastPlayer =  this.players.get(indexOFCurrentPlayer);
 		int newIndex = indexOFCurrentPlayer +1;
 		if(newIndex >= players.size()){
 			newIndex = 0;
 		}
-		System.out.print("index new: "+newIndex);
 		this.currentPlayer = this.players.get(newIndex);
 	}	
 	

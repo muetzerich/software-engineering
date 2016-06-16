@@ -12,6 +12,7 @@ public interface SpielzugManager {
 	int numberOfThrowsLeft();
 	List<Player> getPlayers();
 	List<Token> getDrawableTokens(Player player, int dicePips);
+	int calculateDestination(application.logic.api.Token token,int dicePips);
 	Player getCurrentPlayer();
 	Player getLastPlayer();
 }

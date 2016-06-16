@@ -18,6 +18,8 @@ public class Controller implements Observer<StateType>{
 
 	private Semaphore sem = new Semaphore(0);
 	private Map<String, Integer> call = new HashMap<String, Integer>();
+	
+	private StateType lastState;
 
 	public Controller(Model model, View view) {
 		this.call.put("w", 1);
@@ -73,6 +75,9 @@ public class Controller implements Observer<StateType>{
 		};
 		break;
 		default:
+			if(this.lastState == StateType.MOVE_TOKEN){
+				this.update(StateType.ERROR_MOVE);
+			}
 			this.update(StateType.ERROR);
 			break;
 		}
@@ -89,6 +94,7 @@ public class Controller implements Observer<StateType>{
 	 */
 	public void update(StateType state) {  
 		System.out.println("Update:  state changed to : " + state);
+		this.lastState = state;
 		switch(state){
 		case THROW_DICE:
 			view.getOutputStatus();
@@ -110,8 +116,11 @@ public class Controller implements Observer<StateType>{
 			view.getOutputRollDice();
 			break;
 		case MOVE_NOT_ALLOWED:
+			view.getOutputInvalidInput();
+			view.getOutputChooseMoveFigure();
 			break;
 		case MOVE_TOKEN:
+			view.getOutputThrownDice();
 			view.getOutputChooseMoveFigure();
 			break;
 		case MOVED:
@@ -119,13 +128,17 @@ public class Controller implements Observer<StateType>{
 			view.getOutputStatus();
 			view.getOutputRollDice();
 			break;
-		default:
-			view.getOutputInvalidInput();
+		case ERROR_MOVE:
 			view.getOutputStatus();
+			view.getOutputInvalidInput();
+			view.getOutputChooseMoveFigure();
+			break;
+		default:
+			view.getOutputStatus();
+			view.getOutputInvalidInput();
 			view.getOutputRollDice();
 			break;
 		}
 		sem.release();
-
 	}
 }

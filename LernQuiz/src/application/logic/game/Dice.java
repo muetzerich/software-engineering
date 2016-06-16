@@ -11,7 +11,7 @@ public class Dice {
 		return currentPips;
 	}
 	
-	public int getcurrentPips() {
+	public int getCurrentPips() {
 		return this.currentPips;
 	}
 }

@@ -48,28 +48,27 @@ public class ModelImpl implements Model {
 	 */
 	public void moveFigure(String figureName){
 		StateType newState;
-		if(this.currentState == StateType.MOVE_TOKEN){
-			this.spielzugManager.moveFigure(figureName);
+		if(this.currentState == StateType.MOVE_TOKEN || this.currentState == StateType.MOVE_NOT_ALLOWED){
+			newState = this.spielzugManager.moveFigure(figureName);
+			this.setState(newState);
 		} else {
 			this.setState(this.currentState);
 		}
 	}
-
 
 	public void rollDice() {
 		StateType newState;
 		if(this.currentState == StateType.THROW_AGAIN 
 				|| this.currentState == StateType.THROW_DICE 
 				|| this.currentState == StateType.NO_START_MOVE 
-				|| this.currentState == StateType.NEW_TOKEN){
+				|| this.currentState == StateType.NEW_TOKEN
+				|| this.currentState == StateType.MOVED){
 			newState = this.spielzugManager.throwDice();
 				this.setState(newState);
 		} else {
 			this.setState(this.currentState);
 		}
 	}
-
-	
 
 	/**
 	 * Set the current State and notify all observers.
@@ -104,4 +103,11 @@ public class ModelImpl implements Model {
 	public Player getLastPlayer() {
 		return this.spielzugManager.getLastPlayer();
 	}
+
+	public int calculateDestination(application.logic.api.Token token,
+			int dicePips) {
+		return this.spielzugManager.calculateDestination(token, dicePips);
+
+	}
+
 }

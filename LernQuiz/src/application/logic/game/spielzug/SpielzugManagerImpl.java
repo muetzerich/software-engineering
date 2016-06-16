@@ -46,11 +46,10 @@ public class SpielzugManagerImpl implements SpielzugManager {
 			this.changePlayer();
 			return StateType.NEW_TOKEN;
 		} else if (this.currentPlayer.getNumberOfTokenInStore()<3 
-				&& this.game.getField().isFreeDestinationsForPlayer(this.currentPlayer,this.dice.getcurrentPips())){
-			this.changePlayer();
+				&& this.game.getField().isFreeDestinationsForPlayer(this.currentPlayer,this.dice.getCurrentPips())){
 			return StateType.MOVE_TOKEN;
 		}else if (this.currentPlayer.getNumberOfTokenInStore()<3 
-				&& !this.game.getField().isFreeDestinationsForPlayer(this.currentPlayer,this.dice.getcurrentPips())){
+				&& !this.game.getField().isFreeDestinationsForPlayer(this.currentPlayer,this.dice.getCurrentPips())){
 			this.changePlayer();
 			return StateType.MOVE_NOT_ALLOWED; 
 		}else {
@@ -64,9 +63,16 @@ public class SpielzugManagerImpl implements SpielzugManager {
 	}
 
 	public StateType moveFigure(String input) {
-		int parsedInput = Integer.parseInt(input);
+		int parsedInput = 0;
+		try{
+			parsedInput = Integer.parseInt(input);
+		}
+		catch(NumberFormatException e){
+			return StateType.MOVE_NOT_ALLOWED;
+		}
 		if(this.checkInput(parsedInput)){
 			this.game.getField().moveTokenOnField(currentPlayer.getToken(parsedInput),this.getCurrentPips());
+			this.changePlayer();
 			return StateType.MOVED;
 		} else {
 			return StateType.MOVE_NOT_ALLOWED;
@@ -84,7 +90,7 @@ public class SpielzugManagerImpl implements SpielzugManager {
 	}
 
 	public int getCurrentPips() {
-		return this.dice.getcurrentPips();
+		return this.dice.getCurrentPips();
 	}
 
 	public List<Player> getPlayers() {
@@ -102,12 +108,12 @@ public class SpielzugManagerImpl implements SpielzugManager {
 	public List<Token> getDrawableTokens(Player player, int dicePips) {
 		return this.game.getField().getDrawableTokens(player, dicePips);
 	}
-	public int calculateDestination(Token token,int dicePips) {
+	
+	public int calculateDestination(application.logic.api.Token token,int dicePips) {
 		return this.game.getField().calculateDestination(token, dicePips);
 	}
 
 	public int numberOfThrowsLeft() {
 		return ALLOWED_NUMBER_OF_THROWS-this.numberOfThrows;
 	}
-
 }
