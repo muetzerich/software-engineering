@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V1hexuhipjqzlc0jy6uls">
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<property name="$name" value="PackageClassLernquiz"/>
+		<reference referencedUin="design:view:::V1hexuhiol9vxtw84mtcc">
+			<property name="bounds" value="155,355,115,90"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V1hexuhiol9vg1lp846rf">
+			<property name="bounds" value="315,75,125,170"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V1hexuhiol9v1dy-vwpv29">
+			<property name="bounds" value="156,195,92,122"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V1hexuhiol987gm-cc9zee">
+			<property name="bounds" value="155,75,94,90"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V1hexuhiol9whvq5yfoxl">
+			<property name="bounds" value="315,291,151,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V1hexuhip9pb3m4-8ewx8u">
+			<property name="bounds" value="495,75,168,170"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

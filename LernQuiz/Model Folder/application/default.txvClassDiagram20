@@ -6,10 +6,6 @@
 		<property name="$defaultDiagram" value="true"/>
 		<property name="$metaclass" value="ClassDiagram20"/>
 		<property name="__options" value="option.nlayout.recursive=true"/>
-		<reference referencedUin="design:view:::V1hexuhiol9w5hm4gold9">
-			<property name="bounds" value="105,5,97,60"/>
-			<property name="location_set_by_user" value="true"/>
-		</reference>
 		<reference referencedUin="design:view:::V1hexuhiol9vxtw84mtcc">
 			<property name="bounds" value="5,5,92,91"/>
 			<property name="location_set_by_user" value="true"/>

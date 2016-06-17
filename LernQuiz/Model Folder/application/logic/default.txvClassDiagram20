@@ -10,35 +10,5 @@
 			<property name="bounds" value="375,335,87,123"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.APIFactory">
-			<property name="bounds" value="377,-4,200,125"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactory:factory">
-				<property name="sourceAnchor" value="582,122"/>
-				<property name="targetAnchor" value="578,126"/>
-				<property name="bendpoints" value="611,122,611,155,578,155"/>
-				<property name="smooth_bendpoints" value="611,122,611,155,578,155"/>
-			</reference>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.APIFactoryImpl">
-			<property name="bounds" value="377,140,200,152"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:theFactory">
-				<property name="sourceAnchor" value="582,293"/>
-				<property name="targetAnchor" value="578,297"/>
-				<property name="bendpoints" value="611,293,611,326,578,326"/>
-				<property name="smooth_bendpoints" value="611,293,611,326,578,326"/>
-			</reference>
-			<reference referencedUin="jdt:l_impl:src:application.logic.APIFactoryImpl:APIFactory">
-				<property name="sourceAnchor" value="482,145"/>
-				<property name="targetAnchor" value="482,126"/>
-			</reference>
-			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:model">
-				<property name="sourceAnchor" value="382,191"/>
-				<property name="targetAnchor" value="210,132"/>
-			</reference>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.StateImpl">
-		</reference>
 	</view>
 </nodeSet>

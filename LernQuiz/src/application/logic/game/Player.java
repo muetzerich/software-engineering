@@ -73,7 +73,7 @@ public class Player implements application.logic.api.Player {
 		return this.color;
 	}
 
-	public int getStartfield(){
+	public int getStartfield() {
 		return this.startField;
 	}
 	

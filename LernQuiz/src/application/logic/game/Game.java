@@ -14,10 +14,10 @@ public class Game{
 		this.field = new Field();
 		this.players = new ArrayList<Player>();
 		
-		this.players.add(new Player("blue", 0));
-		this.players.add(new Player("green", 11));
-		this.players.add(new Player("red", 23));
-		this.players.add(new Player("yellow", 35));
+		this.players.add(new Player("blau", 0));
+		this.players.add(new Player("grün", 11));
+		this.players.add(new Player("rot", 23));
+		this.players.add(new Player("gelb", 35));
 		
 		this.currentPlayer = this.players.get(0);
 	}

@@ -27,6 +27,12 @@ public class Controller implements Observer<StateType>{
 		this.model = model;
 		this.view = view;
 	}
+	
+	public void run(){
+		view.getGreeting();
+		this.model.attach(this);
+		this.getInput();
+	}
 
 	private void getInput() {
 		while (true) {	
@@ -87,17 +93,12 @@ public class Controller implements Observer<StateType>{
 		}
 	}
 
-	public void run(){
-		this.model.attach(this);
-		this.getInput();
-	}
-
 	/**
 	 * Update output on state change
 	 * @param state state
 	 */
 	public void update(StateType state) {  
-		System.out.println("Update:  state changed to : " + state);
+		//System.out.println("Update:  state changed to : " + state);
 		this.lastState = state;
 		switch(state){
 		case THROW_DICE:

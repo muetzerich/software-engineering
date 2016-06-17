@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="Vam8ynkipjusind-s1jfly">
+		<property name="$metaclass" value="SequenceDiagram20"/>
+		<property name="$name" value="application.Main.main"/>
+		<property name="__options" value="option.nlayout.recursive=true"/>
+	</view>
+</nodeSet>

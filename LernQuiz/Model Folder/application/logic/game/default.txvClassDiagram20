@@ -10,51 +10,5 @@
 			<property name="bounds" value="5,565,168,91"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.game.Field">
-			<property name="bounds" value="338,363,200,137"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Field:field">
-				<property name="sourceAnchor" value="343,436"/>
-				<property name="targetAnchor" value="217,436"/>
-			</reference>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.game.Dice">
-			<property name="bounds" value="334,545,124,107"/>
-			<property name="location_set_by_user" value="true"/>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.game.Token">
-			<property name="bounds" value="28,333,181,213"/>
-			<property name="location_set_by_user" value="true"/>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.game.Game">
-			<property name="bounds" value="224,-4,188,183"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:field">
-				<property name="sourceAnchor" value="380,184"/>
-				<property name="targetAnchor" value="380,368"/>
-			</reference>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:players">
-				<property name="sourceAnchor" value="228,110"/>
-				<property name="targetAnchor" value="210,113"/>
-				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:application.logic.game.Game:players">
-					<property name="bounds" value="270,-21,12,19"/>
-				</reference>
-				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:application.logic.game.Game:players">
-					<property name="bounds" value="210,-24,27,19"/>
-				</reference>
-			</reference>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:lastPlayer">
-				<property name="sourceAnchor" value="229,112"/>
-				<property name="targetAnchor" value="210,116"/>
-			</reference>
-		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.game.Player">
-			<property name="bounds" value="5,5,200,288"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Player:tokenStore">
-				<property name="sourceAnchor" value="110,298"/>
-				<property name="targetAnchor" value="110,338"/>
-			</reference>
-		</reference>
 	</view>
 </nodeSet>
