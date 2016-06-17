@@ -13,11 +13,11 @@ public class Game{
 	public Game(){
 		this.field = new Field();
 		this.players = new ArrayList<Player>();
-		//Fix 4 Players
+		
 		this.players.add(new Player("blue", 0));
-		this.players.add(new Player("green", 12));
-		this.players.add(new Player("red", 24));
-		this.players.add(new Player("yellow", 36));
+		this.players.add(new Player("green", 11));
+		this.players.add(new Player("red", 23));
+		this.players.add(new Player("yellow", 35));
 		
 		this.currentPlayer = this.players.get(0);
 	}

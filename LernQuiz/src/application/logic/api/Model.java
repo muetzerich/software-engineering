@@ -9,8 +9,8 @@ public interface Model extends Subject<StateType>{
 	public int getCurrentPips();
 	public int numberOfThrowsLeft();
 	public List<Player> getPlayers();
+	public List<application.logic.game.Token> getDrawableTokens(Player player, int dicePips);
 	public Player getCurrentPlayer();
 	public Player getLastPlayer();
-	public List<application.logic.game.Token> getDrawableTokens(Player player, int dicePips);
-	public 	int calculateDestination(application.logic.api.Token token,int dicePips);
+	public int calculateDestination(application.logic.api.Token token,int dicePips);
 }

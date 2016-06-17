@@ -78,7 +78,7 @@ public class Player implements application.logic.api.Player {
 	}
 	
 	public int getStoreSize() {
-		return this.TOKEN_STORE_SIZE;
+		return Player.TOKEN_STORE_SIZE;
 	}
 	
 	public List<Token> getTokensOnField() {

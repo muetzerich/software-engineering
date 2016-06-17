@@ -26,14 +26,6 @@
 			<property name="bounds" value="28,333,181,213"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
-		<reference referencedUin="jdt:e_class:src:application.logic.game.Player">
-			<property name="bounds" value="5,5,200,288"/>
-			<property name="location_set_by_user" value="true"/>
-			<reference referencedUin="jdt:l_ast:src:application.logic.game.Player:tokenStore">
-				<property name="sourceAnchor" value="110,298"/>
-				<property name="targetAnchor" value="110,338"/>
-			</reference>
-		</reference>
 		<reference referencedUin="jdt:e_class:src:application.logic.game.Game">
 			<property name="bounds" value="224,-4,188,183"/>
 			<property name="location_set_by_user" value="true"/>
@@ -54,6 +46,14 @@
 			<reference referencedUin="jdt:l_ast:src:application.logic.game.Game:lastPlayer">
 				<property name="sourceAnchor" value="229,112"/>
 				<property name="targetAnchor" value="210,116"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Player">
+			<property name="bounds" value="5,5,200,288"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:application.logic.game.Player:tokenStore">
+				<property name="sourceAnchor" value="110,298"/>
+				<property name="targetAnchor" value="110,338"/>
 			</reference>
 		</reference>
 	</view>

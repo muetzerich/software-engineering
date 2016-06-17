@@ -32,7 +32,7 @@ public class View {
 		System.out.println("--------------------------------------------------------------");
 	}
 	
-	public void getOutputMoveFigure(){
+	public void getOutputChooseFigure(){
 		System.out.println("Welche Spielfigur willst du bewegen?"); 
 		System.out.println("Du kannst folgende Figuren bewegen: ");
 		for (Token token : model.getDrawableTokens(this.model.getCurrentPlayer(),this.model.getCurrentPips())) {
@@ -42,21 +42,20 @@ public class View {
 		System.out.println("Bitte gebe die Nummer der Figur ein und bestätige mit Enter");
 	}
 	
-	public void getOutputChooseMoveFigure() {
+	public void getOutputMoveFigure() {
 		System.out.println("Du darfst ziehen.");
 		System.out.println("Zum Ziehen bitte 'z' eingeben und mit Enter bestätigen.");
 	}
 
 	public void getOutputSorryMessage(){
-		System.out.println("Du hast leider 3-mal keine 6 gewürfelt.");
-		System.out.println("--------------------------------------------------------------");
+		System.out.println("Du hast leider 3-mal keine 6 gewürfelt.\n");
 	}
 
 	public void getOutputInvalidInput(){
-		System.out.println("Deine Eingabe war ungültig.\n Bitte versuche es noch einmal.");
+		System.out.println("Deine Eingabe war ungültig.\nBitte versuche es noch einmal.");
 	}
 	
-	public void getOutputMovedFigure(){
+	public void getOutputMoveSuccess(){
 		System.out.println("Dein Zug war erfolgreich");
 	}
 

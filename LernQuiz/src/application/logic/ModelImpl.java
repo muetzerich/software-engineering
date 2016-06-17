@@ -41,7 +41,7 @@ public class ModelImpl implements Model {
 	 */
 	public void moveFigure(String figureName){
 		StateType newState;
-		if(this.currentState == StateType.MOVE_TOKEN || this.currentState == StateType.MOVE_NOT_ALLOWED){
+		if(this.currentState == StateType.MOVE_TOKEN || this.currentState == StateType.ERROR_MOVE){
 			newState = this.spielzugManager.moveFigure(figureName);
 			this.setState(newState);
 		} else {

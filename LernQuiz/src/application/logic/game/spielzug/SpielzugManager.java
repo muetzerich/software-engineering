@@ -6,13 +6,13 @@ import application.logic.game.Player;
 import application.logic.game.Token;
 
 public interface SpielzugManager {
-	StateType throwDice();
-	StateType moveFigure(String input);
 	int getCurrentPips();
 	int numberOfThrowsLeft();
+	int calculateDestination(application.logic.api.Token token,int dicePips);
+	StateType throwDice();
+	StateType moveFigure(String input);
 	List<Player> getPlayers();
 	List<Token> getDrawableTokens(Player player, int dicePips);
-	int calculateDestination(application.logic.api.Token token,int dicePips);
 	Player getCurrentPlayer();
 	Player getLastPlayer();
 }

@@ -68,14 +68,14 @@ public class SpielzugManagerImpl implements SpielzugManager {
 			parsedInput = Integer.parseInt(input);
 		}
 		catch(NumberFormatException e){
-			return StateType.MOVE_NOT_ALLOWED;
+			return StateType.ERROR_MOVE;
 		}
 		if(this.checkInput(parsedInput)){
 			this.game.getField().moveTokenOnField(currentPlayer.getToken(parsedInput),this.getCurrentPips());
 			this.changePlayer();
 			return StateType.MOVED;
 		} else {
-			return StateType.MOVE_NOT_ALLOWED;
+			return StateType.ERROR_MOVE;
 		}
 	}
 

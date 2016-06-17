@@ -18,7 +18,7 @@ public class Controller implements Observer<StateType>{
 
 	private Semaphore sem = new Semaphore(0);
 	private Map<String, Integer> call = new HashMap<String, Integer>();
-	
+
 	private StateType lastState;
 
 	public Controller(Model model, View view) {
@@ -29,7 +29,6 @@ public class Controller implements Observer<StateType>{
 	}
 
 	private void getInput() {
-		String str = new String();
 		while (true) {	
 			try {
 				sem.acquire();
@@ -59,19 +58,23 @@ public class Controller implements Observer<StateType>{
 		};
 		break;
 		case 2: {
-			new Thread(){
-				public void run(){
-					//System.out.println("Thread: " + getName() + " running");
-					String input = new String();
-					view.getOutputMoveFigure();
-					try{
-						BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-						input = in.readLine();
+			if(this.lastState == StateType.MOVE_TOKEN || this.lastState == StateType.ERROR_MOVE){
+				new Thread(){
+					public void run(){
+						//System.out.println("Thread: " + getName() + " running");
+						String input = new String();
+						view.getOutputChooseFigure();
+						try{
+							BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+							input = in.readLine();
+						}
+						catch(IOException e){}
+						model.moveFigure(input);
 					}
-					catch(IOException e){}
-					model.moveFigure(input);
-				}
-			}.start();	
+				}.start();	
+			}else{
+				this.update(lastState);
+			}
 		};
 		break;
 		default:
@@ -118,21 +121,21 @@ public class Controller implements Observer<StateType>{
 			break;
 		case MOVE_NOT_ALLOWED:
 			view.getOutputInvalidInput();
-			view.getOutputChooseMoveFigure();
 			break;
 		case MOVE_TOKEN:
+			view.getOutputStatus();
 			view.getOutputThrownDice();
-			view.getOutputChooseMoveFigure();
+			view.getOutputMoveFigure();
 			break;
 		case MOVED:
-			view.getOutputMovedFigure();
+			view.getOutputMoveSuccess();
 			view.getOutputStatus();
 			view.getOutputRollDice();
 			break;
 		case ERROR_MOVE:
 			view.getOutputStatus();
 			view.getOutputInvalidInput();
-			view.getOutputChooseMoveFigure();
+			view.getOutputMoveFigure();
 			break;
 		default:
 			view.getOutputStatus();
