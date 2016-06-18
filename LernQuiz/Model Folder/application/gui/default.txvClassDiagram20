@@ -5,5 +5,11 @@
 	<view uin="V1hexuhiol9vxtw84mtcc">
 		<property name="$defaultDiagram" value="true"/>
 		<property name="$metaclass" value="ClassDiagram20"/>
+		<reference referencedUin="jdt:e_class:src:application.gui.View">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.gui.Controller">
+			<property name="$hidden" value="true"/>
+		</reference>
 	</view>
 </nodeSet>

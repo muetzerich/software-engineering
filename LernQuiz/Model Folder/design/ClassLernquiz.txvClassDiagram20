@@ -27,8 +27,6 @@
 				<property name="targetAnchor" value="99,400"/>
 				<property name="location_set_by_user" value="true"/>
 			</reference>
-			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.start:start">
-			</reference>
 			<reference referencedUin="jdt:l_ast:src:application.logic.ModelImpl:spielzugManager">
 				<property name="sourceAnchor" value="299,919"/>
 				<property name="targetAnchor" value="799,919"/>
@@ -44,8 +42,6 @@
 				<property name="smooth_bendpoints" value="740,880,740,620"/>
 			</reference>
 			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.attach:attach~QObserver\&lt;QStateType;&gt;;">
-			</reference>
-			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice">
 			</reference>
 			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.getCurrentPips:getCurrentPips">
 			</reference>
@@ -237,10 +233,10 @@
 				<property name="sourceAnchor" value="1481,399"/>
 				<property name="targetAnchor" value="1600,399"/>
 				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:application.logic.game.Game:players">
-					<property name="bounds" value="1564,378,26,18"/>
+					<property name="bounds" value="1569,377,21,19"/>
 				</reference>
 				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:application.logic.game.Game:players">
-					<property name="bounds" value="1491,378,12,18"/>
+					<property name="bounds" value="1491,377,10,19"/>
 				</reference>
 			</reference>
 		</reference>

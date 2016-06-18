@@ -734,7 +734,7 @@
 		</node>
 		<node uin="a6k48ripfj6p6r-zhos0m">
 			<property name="$metaclass" value="ActivityPartition"/>
-			<property name="$name" value="Partition1"/>
+			<property name="$name" value="View"/>
 			<link uin="ieje0ripfj7hqu-8ii3sq">
 				<property name="$metaclass" value="containedNode"/>
 				<participant referencedUin="design:node:::a6k48ripfj6p6r-zhos0m:-46k66riovifomqtwguge" role="Client"></participant>
@@ -1179,7 +1179,7 @@
 		<link uin="ieje0ripjtzq2ocyikj9">
 			<property name="$metaclass" value="SD20_Interaction_LinkToSpecification"/>
 			<participant referencedUin="design:node:::-yrgd8eipjtzq2fgay82s" role="Client"></participant>
-			<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice" role="Supplier"></participant>
+			<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.moveFigure:moveFigure~QString;" role="Supplier"></participant>
 		</link>
 		<node uin="-y8nsowipjtzq2w-iak99b">
 			<property name="$metaclass" value="SD20_Lifeline"/>
@@ -1229,11 +1229,6 @@
 							<property name="receiveExecutionSpecificationPuin" value="design:node:::c87hzvipjtzq75-gjsis0:7x5rzxipjtzq70-vsealf:7x5rzxipjtzq6zraszu4:-y8nsowipjtzq6wgntvmv:-yrgd8eipjtzq2fgay82s"/>
 							<property name="attribute" value="newState"/>
 							<property name="call_cachedSequenceNumber" value="1.1"/>
-							<link uin="ieje0ripjtzq78-r3u38m">
-								<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
-								<participant referencedUin="design:node:::l2gqtvipjtzq75-jz5jou:7x5rzxipjtzq3j69ankt:7x5rzxipjtzq3h3x193m:c87hzvipjtzq31frntjr:-y8nsowipjtzq2w-iak99b:-yrgd8eipjtzq2fgay82s" role="Client"></participant>
-								<participant referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.throwDice:throwDice" role="Supplier"></participant>
-							</link>
 						</node>
 						<node uin="l2gqtvipjtzq7btymdtp">
 							<property name="$metaclass" value="SD20_Int_InvocationSpecification"/>
@@ -1295,7 +1290,7 @@
 							<link uin="ieje0ripjtzq7d-pn2bo8">
 								<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
 								<participant referencedUin="design:node:::l2gqtvipjtzq7btymdtp:7x5rzxipjtzq3j69ankt:7x5rzxipjtzq3h3x193m:c87hzvipjtzq31frntjr:-y8nsowipjtzq2w-iak99b:-yrgd8eipjtzq2fgay82s" role="Client"></participant>
-								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.setState:setState~QStateType;" role="Supplier"></participant>
+								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice" role="Supplier"></participant>
 							</link>
 							<node uin="rf4xatipjtzq7h-4yl48m">
 								<property name="$metaclass" value="SD20_Int_Message_Argument"/>
@@ -1338,7 +1333,7 @@
 							<link uin="ieje0ripjtzq8x-uoa4cl">
 								<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
 								<participant referencedUin="design:node:::l2gqtvipjtzq8wtgp6ue:7x5rzxipjtzq8d-73qyt8:7x5rzxipjtzq3h3x193m:c87hzvipjtzq31frntjr:-y8nsowipjtzq2w-iak99b:-yrgd8eipjtzq2fgay82s" role="Client"></participant>
-								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.setState:setState~QStateType;" role="Supplier"></participant>
+								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice" role="Supplier"></participant>
 							</link>
 							<node uin="rf4xatipjtzq8ytqlzf4">
 								<property name="$metaclass" value="SD20_Int_Message_Argument"/>
@@ -1373,7 +1368,7 @@
 			<link uin="ieje0ripjtzq3eeutr20">
 				<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
 				<participant referencedUin="design:node:::l2gqtvipjtzq31hxgo2j:-yrgd8eipjtzq2fgay82s" role="Client"></participant>
-				<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice" role="Supplier"></participant>
+				<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.moveFigure:moveFigure~QString;" role="Supplier"></participant>
 			</link>
 		</node>
 		<node uin="7chx8lipjtzq3gsq68kn">
@@ -1639,7 +1634,7 @@
 							<link uin="ieje0ripju8c9zirukzy">
 								<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
 								<participant referencedUin="design:node:::l2gqtvipju8c9yc4q3ng:7x5rzxipju8c8x-c6q3hp:7x5rzxipju8c8wd43m5:c87hzvipju8c8s-qt6mme:-y8nsowipju8c8r-9dbcw7:-yrgd8eipju8c8n-k8b7vq" role="Client"></participant>
-								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.setState:setState~QStateType;" role="Supplier"></participant>
+								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice" role="Supplier"></participant>
 							</link>
 							<node uin="rf4xatipju8ca0-11m204">
 								<property name="$metaclass" value="SD20_Int_Message_Argument"/>
@@ -1682,7 +1677,7 @@
 							<link uin="ieje0ripju8cbnr5tw0u">
 								<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
 								<participant referencedUin="design:node:::l2gqtvipju8cbl45gdrf:7x5rzxipju8cb1x5mseq:7x5rzxipju8c8wd43m5:c87hzvipju8c8s-qt6mme:-y8nsowipju8c8r-9dbcw7:-yrgd8eipju8c8n-k8b7vq" role="Client"></participant>
-								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.setState:setState~QStateType;" role="Supplier"></participant>
+								<participant referencedUin="jdt:e_method:src:application.logic.ModelImpl.rollDice:rollDice" role="Supplier"></participant>
 							</link>
 							<node uin="rf4xatipju8cbnh03g04">
 								<property name="$metaclass" value="SD20_Int_Message_Argument"/>
@@ -2187,11 +2182,6 @@
 																<property name="$metaclass" value="SD20_ExecutionSpecification"/>
 																<property name="$name" value="SD20_ExecutionSpecification1"/>
 															</node>
-															<link uin="9yp6agipjuxwrg-h10ha1">
-																<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
-																<participant referencedUin="design:node:::2vbvowipjuxwrgxslq34:d6ijwiipjuxwrggpch8:vjq807ipjuxwrg9v7uam:ccm52fipjuxwrf-wc11cu:4j7haoipjuxwrf-utngp5:k5ekptipjuxwrf-qyyirr:k1qiszipjuxwrf-ddi7xr:7x5rzxipjux50h-bu5rwq:7x5rzxipjux50h-au8vzr:c87hzvipjux50f-xhvx9z:l2gqtvipjux50f-9qf49g:c87hzvipjux509-a6vbk1:-y8nsowipjux506ykqm01:-yrgd8eipjux4zj-5haf6h" role="Client"></participant>
-																<participant referencedUin="jdt:e_method:src:application.gui.Controller.update:update~QStateType;" role="Supplier"></participant>
-															</link>
 															<node uin="v1i287ipjuxwrg-qnamyd">
 																<property name="$metaclass" value="SD20_Int_Message_Argument"/>
 																<property name="$name" value="SD20_Int_Message_Argument1"/>
@@ -2267,11 +2257,6 @@
 																<property name="$metaclass" value="SD20_ExecutionSpecification"/>
 																<property name="$name" value="SD20_ExecutionSpecification1"/>
 															</node>
-															<link uin="w8ws0sipjuxwrg-vlzru9">
-																<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
-																<participant referencedUin="design:node:::z8wumqipjuxwrg-d47wrz:iupugsipjuxwrgng1k3w:xvyfugipjuxwrg-w9kfkv:eo0hlwipjuxwrgxzes8r:4j7haoipjuxwrf-utngp5:k5ekptipjuxwrf-qyyirr:k1qiszipjuxwrf-ddi7xr:7x5rzxipjux50h-bu5rwq:7x5rzxipjux50h-au8vzr:c87hzvipjux50f-xhvx9z:l2gqtvipjux50f-9qf49g:c87hzvipjux509-a6vbk1:-y8nsowipjux506ykqm01:-yrgd8eipjux4zj-5haf6h" role="Client"></participant>
-																<participant referencedUin="jdt:e_method:src:application.gui.Controller.update:update~QStateType;" role="Supplier"></participant>
-															</link>
 															<node uin="jhe4bhipjuxwrg-7ow01r">
 																<property name="$metaclass" value="SD20_Int_Message_Argument"/>
 																<property name="$name" value="SD20_Int_Message_Argument1"/>
@@ -2310,11 +2295,6 @@
 																<property name="$metaclass" value="SD20_ExecutionSpecification"/>
 																<property name="$name" value="SD20_ExecutionSpecification1"/>
 															</node>
-															<link uin="xvwmo6ipjuxwrg-zgjxhy">
-																<property name="$metaclass" value="SD20_Message_LinkToSignatureNamedElement"/>
-																<participant referencedUin="design:node:::qvbzhripjuxwrgh6qqtn:zazn4eipjuxwrg1j0129:xvyfugipjuxwrg-w9kfkv:eo0hlwipjuxwrgxzes8r:4j7haoipjuxwrf-utngp5:k5ekptipjuxwrf-qyyirr:k1qiszipjuxwrf-ddi7xr:7x5rzxipjux50h-bu5rwq:7x5rzxipjux50h-au8vzr:c87hzvipjux50f-xhvx9z:l2gqtvipjux50f-9qf49g:c87hzvipjux509-a6vbk1:-y8nsowipjux506ykqm01:-yrgd8eipjux4zj-5haf6h" role="Client"></participant>
-																<participant referencedUin="jdt:e_method:src:application.gui.Controller.update:update~QStateType;" role="Supplier"></participant>
-															</link>
 															<node uin="olfdr3ipjuxwrg-hegsir">
 																<property name="$metaclass" value="SD20_Int_Message_Argument"/>
 																<property name="$name" value="SD20_Int_Message_Argument1"/>

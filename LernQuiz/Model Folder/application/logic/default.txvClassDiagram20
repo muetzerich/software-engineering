@@ -10,5 +10,17 @@
 			<property name="bounds" value="375,335,87,123"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.ModelImpl">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.StateImpl">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.APIFactory">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.APIFactoryImpl">
+			<property name="$hidden" value="true"/>
+		</reference>
 	</view>
 </nodeSet>

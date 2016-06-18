@@ -18,5 +18,8 @@
 			<property name="bounds" value="240,-4,92,91"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
+		<reference referencedUin="jdt:e_class:src:application.Main">
+			<property name="$hidden" value="true"/>
+		</reference>
 	</view>
 </nodeSet>

@@ -34,8 +34,8 @@ public class View {
 	}
 
 	public void getOutputMoveTokenToStartfield(){
-		System.out.println("Gl\u00FCckwunsch, du hast eine 6 gew\u00FCrfelt! \nwDeine Spielfigur "
-				+this.model.getLastPlayer().getColor()+this.model.getLastPlayer().getLastMovedToken() +" ist nun im Spiel");
+		System.out.println("Gl\u00FCckwunsch, du hast eine 6 gew\u00FCrfelt! \nDeine Spielfigur "
+				+this.model.getLastPlayer().getColor()+" "+this.model.getLastPlayer().getLastMovedToken() +" ist nun im Spiel");
 	}
 	
 	public void getOutputRollDiceAgain(){

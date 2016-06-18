@@ -9,5 +9,23 @@
 			<property name="bounds" value="119,193,200,94"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.State">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Player">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Model">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Observer">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Subject">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Token">
+			<property name="$hidden" value="true"/>
+		</reference>
 	</view>
 </nodeSet>

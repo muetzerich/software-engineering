@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="di5y12ipkxrm12-bbo0zd">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<reference referencedUin="design:view:::pz2rkgipkxrm13-wz67pw">
+			<property name="bounds" value="0,0,0,0"/>
+		</reference>
+		<reference referencedUin="design:view:::aruqcjipkxxfybxeahnh">
+			<property name="bounds" value="0,0,0,0"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

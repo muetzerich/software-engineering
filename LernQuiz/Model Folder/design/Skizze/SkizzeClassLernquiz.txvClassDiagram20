@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="pz2rkgipkxrm13-wz67pw">
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<property name="$name" value="SkizzeClassLernquiz"/>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Model">
+			<property name="bounds" value="17,215,279,119"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.getLastPlayer:getLastPlayer">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.numberOfThrowsLeft:numberOfThrowsLeft">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.getCurrentPlayer:getCurrentPlayer">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.moveFigure:moveFigure~QString;">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.getDrawableTokens:getDrawableTokens~QPlayer;~I">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.rollDice:rollDice">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.getCurrentPips:getCurrentPips">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:application.logic.api.Model:Subject&lt;StateType&gt;">
+				<property name="sourceAnchor" value="160,220"/>
+				<property name="targetAnchor" value="160,141"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.calculateDestination:calculateDestination~Qapplication.logic.api.Token;~I">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Model.getPlayers:getPlayers">
+				<property name="$hidden" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.ModelImpl">
+			<property name="bounds" value="17,415,280,147"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="collapsedCompartments" value=""/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="hideAll" value="true"/>
+			<reference referencedUin="jdt:l_impl:src:application.logic.ModelImpl:Model">
+				<property name="sourceAnchor" value="161,419"/>
+				<property name="targetAnchor" value="161,338"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.ModelImpl:spielzugManager">
+				<property name="sourceAnchor" value="235,567"/>
+				<property name="targetAnchor" value="235,760"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.moveFigure:moveFigure~QString;">
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.ModelImpl:factory">
+				<property name="sourceAnchor" value="301,559"/>
+				<property name="targetAnchor" value="477,559"/>
+				<property name="location_set_by_user" value="true"/>
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.attach:attach~QObserver\&lt;QStateType;&gt;;">
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.ModelImpl.getCurrentPips:getCurrentPips">
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.ModelImpl:currentState">
+				<property name="sourceAnchor" value="299,652"/>
+				<property name="targetAnchor" value="404,652"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:application.logic.ModelImpl.observers">
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.APIFactoryImpl">
+			<property name="bounds" value="472,515,261,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="hideProperty20" value="true"/>
+			<property name="hideAll" value="true"/>
+			<reference referencedUin="jdt:l_impl:src:application.logic.APIFactoryImpl:APIFactory">
+				<property name="sourceAnchor" value="737,559"/>
+				<property name="targetAnchor" value="840,559"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:game">
+				<property name="sourceAnchor" value="1138,505"/>
+				<property name="targetAnchor" value="1220,505"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:modelImpl">
+				<property name="sourceAnchor" value="477,553"/>
+				<property name="targetAnchor" value="302,553"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:theFactory">
+				<property name="sourceAnchor" value="738,596"/>
+				<property name="targetAnchor" value="733,600"/>
+				<property name="bendpoints" value="768,596,768,630,733,630"/>
+				<property name="smooth_bendpoints" value="768,596,768,630,733,630"/>
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactoryImpl:spielzugManagerImpl">
+				<property name="sourceAnchor" value="619,599"/>
+				<property name="targetAnchor" value="619,759"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.APIFactoryImpl.getModel:getModel">
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.APIFactory">
+			<property name="bounds" value="835,485,329,140"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_method:src:application.logic.APIFactory.getSpielzugManager:getSpielzugManager">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:application.logic.APIFactory.factory">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.APIFactory.getModel:getModel">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.APIFactory:factory">
+				<property name="sourceAnchor" value="1609,597"/>
+				<property name="targetAnchor" value="1605,601"/>
+				<property name="bendpoints" value="1638,597,1638,630,1605,630"/>
+				<property name="smooth_bendpoints" value="1638,597,1638,630,1605,630"/>
+				<property name="$hidden" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Observer">
+			<property name="bounds" value="875,314,246,121"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_tsig:src:application.logic.api.Observer:e_class">
+				<property name="bounds" value="226,-12,40,25"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Observer.update:update~QT;">
+				<property name="$hidden" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.api.Subject">
+			<property name="bounds" value="40,35,233,101"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<reference referencedUin="jdt:e_tsig:src:application.logic.api.Subject:e_class">
+				<property name="bounds" value="213,-12,40,25"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Subject.attach:attach~QObserver\&lt;QT;&gt;;">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.api.Subject.detach:detach~QObserver\&lt;QT;&gt;;">
+				<property name="bounds" value="121,-12,40,25"/>
+				<property name="$hidden" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.gui.Controller">
+			<property name="bounds" value="455,315,221,102"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="hideAll" value="true"/>
+			<reference referencedUin="jdt:e_field:src:application.gui.Controller.view">
+				<property name="bounds" value="18,44,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_impl:src:application.gui.Controller:Observer&lt;StateType&gt;">
+				<property name="sourceAnchor" value="681,370"/>
+				<property name="targetAnchor" value="880,370"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.gui.Controller:model">
+				<property name="sourceAnchor" value="539,319"/>
+				<property name="targetAnchor" value="301,299"/>
+				<property name="location_set_by_user" value="true"/>
+				<property name="bendpoints" value="540,300"/>
+				<property name="smooth_bendpoints" value="540,300"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.gui.Controller:lastState">
+				<property name="sourceAnchor" value="508,530"/>
+				<property name="targetAnchor" value="508,645"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.gui.Controller:view">
+				<property name="sourceAnchor" value="577,320"/>
+				<property name="targetAnchor" value="577,200"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.gui.View">
+			<property name="bounds" value="464,95,277,100"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="collapsedCompartments" value=""/>
+			<property name="hideAll" value="true"/>
+			<reference referencedUin="jdt:e_method:src:application.gui.View.View:View~QModel;">
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.gui.View:model">
+				<property name="sourceAnchor" value="499,200"/>
+				<property name="targetAnchor" value="301,260"/>
+				<property name="location_set_by_user" value="true"/>
+				<property name="bendpoints" value="500,260"/>
+				<property name="smooth_bendpoints" value="500,260"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.spielzug.SpielzugManager">
+			<property name="bounds" value="17,755,341,100"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.getDrawableTokens:getDrawableTokens~QPlayer;~I">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.getPlayers:getPlayers">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.getLastPlayer:getLastPlayer">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.throwDice:throwDice">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.getCurrentPlayer:getCurrentPlayer">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.getCurrentPips:getCurrentPips">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.calculateDestination:calculateDestination~Qapplication.logic.api.Token;~I">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.numberOfThrowsLeft:numberOfThrowsLeft">
+				<property name="$hidden" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:application.logic.game.spielzug.SpielzugManager.moveFigure:moveFigure~QString;">
+				<property name="$hidden" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.spielzug.SpielzugManagerImpl">
+			<property name="bounds" value="495,755,237,100"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="hideAll" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:application.logic.game.spielzug.SpielzugManagerImpl:game">
+				<property name="sourceAnchor" value="1320,600"/>
+				<property name="targetAnchor" value="1320,510"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.game.spielzug.SpielzugManagerImpl:dice">
+				<property name="sourceAnchor" value="1541,820"/>
+				<property name="targetAnchor" value="1600,820"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:application.logic.game.spielzug.SpielzugManagerImpl:currentPlayer">
+				<property name="sourceAnchor" value="1541,607"/>
+				<property name="targetAnchor" value="1600,607"/>
+			</reference>
+			<reference referencedUin="jdt:l_impl:src:application.logic.game.spielzug.SpielzugManagerImpl:SpielzugManager">
+				<property name="sourceAnchor" value="500,810"/>
+				<property name="targetAnchor" value="363,810"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

@@ -1,3 +1,4 @@
+
 package application.logic.game.spielzug;
 import java.util.List;
 
@@ -9,10 +10,12 @@ public interface SpielzugManager {
 	int getCurrentPips();
 	int numberOfThrowsLeft();
 	int calculateDestination(application.logic.api.Token token,int dicePips);
-	StateType throwDice();
+	
 	StateType moveFigure(String input);
 	List<Player> getPlayers();
+	public StateType throwDice();
 	List<Token> getDrawableTokens(Player player, int dicePips);
 	Player getCurrentPlayer();
 	Player getLastPlayer();
 }
+

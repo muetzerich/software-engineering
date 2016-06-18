@@ -1,3 +1,4 @@
+
 package application.gui;
 
 import java.io.BufferedReader;
@@ -14,9 +15,12 @@ import application.logic.api.Observer;
 public class Controller implements Observer<StateType>{
 
 	private Model model;
-	private View view;
+	
 
 	private Semaphore sem = new Semaphore(0);
+	private View view;
+
+
 	private Map<String, Integer> call = new HashMap<String, Integer>();
 
 	private StateType lastState;
@@ -93,10 +97,10 @@ public class Controller implements Observer<StateType>{
 		}
 	}
 
-	/**
-	 * Update output on state change
-	 * @param state state
-	 */
+/**
+* Update output on state change
+* @param state state
+*/
 	public void update(StateType state) {  
 		//System.out.println("Update:  state changed to : " + state);
 		this.lastState = state;
@@ -147,3 +151,4 @@ public class Controller implements Observer<StateType>{
 		sem.release();
 	}
 }
+

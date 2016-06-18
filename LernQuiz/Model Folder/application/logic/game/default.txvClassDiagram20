@@ -10,5 +10,20 @@
 			<property name="bounds" value="5,565,168,91"/>
 			<property name="location_set_by_user" value="true"/>
 		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Token">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Player">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Game">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Dice">
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:application.logic.game.Field">
+			<property name="$hidden" value="true"/>
+		</reference>
 	</view>
 </nodeSet>
