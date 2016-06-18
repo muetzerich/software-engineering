@@ -2,7 +2,8 @@ package application.logic.game;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ */
 public class Field {
 	
 	public static final int FIELD_SIZE = 48;
@@ -33,10 +34,20 @@ public class Field {
 		}
 	}
 	
+	/**
+	 * Set player on start field
+	 * @param player current player
+	 * @param playerToken player token
+	 */
 	public void setPlayerOnStartfield(Player player,Token playerToken) {
 		this.field[player.getStartfield()] = playerToken;
 	}
 	
+	/**
+	 * Check if start field is free
+	 * @param player a player
+	 * @return true if starfield is free
+	 */
 	public boolean isStartFieldFree(Player player) {
 		boolean isFree = false;
 		if(this.field[player.getStartfield()]==null){
@@ -45,6 +56,12 @@ public class Field {
 		return isFree;
 	}
 
+	/**
+	 * Check if there are free destination fields for a player
+	 * @param player a player
+	 * @param dicePips dice pips
+	 * @return true if free destinations fields
+	 */
 	public boolean isFreeDestinationsForPlayer(Player player, int dicePips) {
 		boolean isPossible = false;
 		for (Token token : player.getTokensOnField()) {
@@ -59,6 +76,12 @@ public class Field {
 		return isPossible;
 	}
 	
+	/**
+	 * Get all drawable Tokens
+	 * @param player a player
+	 * @param dicePips dice pips
+	 * @retur nall drawable Tokens
+	 */
 	public List<Token> getDrawableTokens(Player player,int dicePips) {
 		List<Token> drawableTokens = new ArrayList<Token>();
 		for (Token token: player.getTokensOnField()){
@@ -69,7 +92,12 @@ public class Field {
 		}
 		return drawableTokens;
 	}
-	
+	/**
+	 * Calculate destination field
+	 * @param token a Token
+	 * @param dicePips the dice pips
+	 * @return the calculated destination
+	 */
 	public int calculateDestination(application.logic.api.Token token,int dicePips) {
 		int destination = token.getIndexOnField() + dicePips;
 		if(destination > FIELD_SIZE){

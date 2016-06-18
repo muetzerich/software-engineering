@@ -28,14 +28,27 @@ public class Player implements application.logic.api.Player {
 		return this.tokenStore[index] = token;
 	}
 
+	/**
+	 * Get Token 
+	 * @param index token position 
+	 * @return a token 
+	 */
 	public Token getToken(int index){
 		return this.tokenStore[index];
 	}
-	
+
+	/**
+	 * get all Tokens
+	 * @return all Tokens
+	 */
 	public Token[] getAllTokens(){
 		return this.tokenStore;
 	}
-	
+
+	/**
+	 * Get number of Tokens in store
+	 * @return number of token in store
+	 */
 	public int getNumberOfTokenInStore(){
 		int counter = 0;
 		for (int i = 0; i < this.tokenStore.length; i++){
@@ -45,7 +58,10 @@ public class Player implements application.logic.api.Player {
 		}
 		return counter;
 	}
-	
+
+	/**
+	 * Get number of Tokens on Field
+	 */
 	public int getNumberOfTokenInField(){
 		int counter = 0;
 		for (int i = 0; i < this.tokenStore.length; i++){
@@ -55,7 +71,10 @@ public class Player implements application.logic.api.Player {
 		}
 		return counter;
 	}
-	
+
+	/**
+	 * Set Token on start field
+	 */
 	public void setTokenOnStartfield(){
 		for(int i = 0; i < TOKEN_STORE_SIZE; i++){
 			if(!this.tokenStore[i].isInGame()){
@@ -64,7 +83,21 @@ public class Player implements application.logic.api.Player {
 			}
 		}
 	}
-	
+	/**
+	 * Get all Tokens on Field
+	 * @return all tokens on field
+	 */
+	public List<Token> getTokensOnField() {
+		List<Token> tokensOnField = new ArrayList<Token>();
+		for (int i = 0; i < this.tokenStore.length; i ++){
+			if (this.tokenStore[i].isInGame() == true ){
+				tokensOnField.add(this.tokenStore[i]);
+			}
+		}
+		return tokensOnField;
+	}
+
+
 	public int getLastMovedToken() {
 		return lastMovedToken;
 	}
@@ -76,18 +109,10 @@ public class Player implements application.logic.api.Player {
 	public int getStartfield() {
 		return this.startField;
 	}
-	
+
 	public int getStoreSize() {
 		return Player.TOKEN_STORE_SIZE;
 	}
-	
-	public List<Token> getTokensOnField() {
-		List<Token> tokensOnField = new ArrayList<Token>();
-		for (int i = 0; i < this.tokenStore.length; i ++){
-			if (this.tokenStore[i].isInGame() == true ){
-				tokensOnField.add(this.tokenStore[i]);
-			}
-		}
-		return tokensOnField;
-	}
+
+
 }

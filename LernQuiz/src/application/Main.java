@@ -5,6 +5,11 @@ import application.gui.Controller;
 import application.logic.APIFactory;
 import application.logic.api.Model;
 
+/**
+ * Entry Point for Lern Quiz Game
+ * @author Tetiana Ulianova, Kevin Wolf, Maximilian Vogel
+ *
+ */
 public class Main {
 	public static void main(String[] args) {
 		APIFactory api = APIFactory.factory;

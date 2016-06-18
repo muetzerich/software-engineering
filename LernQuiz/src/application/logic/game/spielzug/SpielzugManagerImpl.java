@@ -22,6 +22,9 @@ public class SpielzugManagerImpl implements SpielzugManager {
 		this.dice = new Dice();
 	}
 
+	/**
+	 * Implementation of state functions for throw dice
+	 */
 	public StateType throwDice() {
 		this.currentPlayer = this.game.getCurrentPlayer();
 		this.dice.rollDice();
@@ -30,6 +33,9 @@ public class SpielzugManagerImpl implements SpielzugManager {
 
 	} 
 
+	/**
+	 * Implementation of state functions for dice is thrown
+	 */
 	private StateType diceIsThrown(){
 		this.currentPlayer = this.game.getCurrentPlayer();
 		if(this.currentPlayer.getNumberOfTokenInStore() == 3 
@@ -57,11 +63,17 @@ public class SpielzugManagerImpl implements SpielzugManager {
 		}
 	}
 
+	/**
+	 * Change player
+	 */
 	private void changePlayer(){
 		this.game.setNextPlayer();
 		this.numberOfThrows = 0;
 	}
 
+	/**
+	 * Implementation of state functions for move figure
+	 */
 	public StateType moveFigure(String input) {
 		int parsedInput = 0;
 		try{
@@ -79,6 +91,11 @@ public class SpielzugManagerImpl implements SpielzugManager {
 		}
 	}
 
+	/**
+	 * Check if input is valid
+	 * @param input index of token
+	 * @return true if input is valid
+	 */
 	private boolean checkInput(int input){
 		boolean isValid = false;
 		for(Token token: this.game.getField().getDrawableTokens(this.currentPlayer, this.getCurrentPips())){
@@ -104,11 +121,11 @@ public class SpielzugManagerImpl implements SpielzugManager {
 	public Player getLastPlayer() {
 		return this.game.getLastPlayer();
 	}
-	
+
 	public List<Token> getDrawableTokens(Player player, int dicePips) {
 		return this.game.getField().getDrawableTokens(player, dicePips);
 	}
-	
+
 	public int calculateDestination(application.logic.api.Token token,int dicePips) {
 		return this.game.getField().calculateDestination(token, dicePips);
 	}

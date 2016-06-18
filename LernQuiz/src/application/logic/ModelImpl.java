@@ -21,15 +21,25 @@ public class ModelImpl implements Model {
 		this.factory = factory;
 	}
 
+	/**
+	 * initialize model 
+	 */
 	void start() {
 		this.currentState = StateType.THROW_DICE;
 		this.spielzugManager = this.factory.getSpielzugManager();
 	}
-
+	
+	/**
+	 * Detach from Observer
+	 */
 	public void detach(Observer<StateType> obs) {
 		this.observers.remove(obs);
 	}
 
+
+	/**
+	 * Attach to Observer
+	 */
 	public void attach(Observer<StateType> obs) {
 		this.observers.add(obs);
 		obs.update(this.currentState);

@@ -21,15 +21,25 @@ public class Game{
 		
 		this.currentPlayer = this.players.get(0);
 	}
-	
+	/**
+	 * get current player
+	 * @return the current player
+	 */
 	public Player getCurrentPlayer(){
 		return this.currentPlayer;
 	}
 	
+	/**
+	 * Get the last Player
+	 * @return the last player
+	 */
 	public Player getLastPlayer() {
 		return this.lastPlayer;
 	}
 	
+	/**
+	 * Change player
+	 */
 	public void setNextPlayer(){
 		int indexOFCurrentPlayer = this.players.indexOf(this.currentPlayer);
 		this.lastPlayer =  this.players.get(indexOFCurrentPlayer);
@@ -39,11 +49,18 @@ public class Game{
 		}
 		this.currentPlayer = this.players.get(newIndex);
 	}	
-	
+	/**
+	 * Get Field
+	 * @return the Field
+	 */
 	public Field getField(){
 		return this.field;
 	}
 	
+	/**
+	 * get all players
+	 * @return all players
+	 */
 	public List<Player> getPlayer() {
 		return players;
 	}
