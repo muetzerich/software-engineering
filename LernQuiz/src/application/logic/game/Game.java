@@ -15,7 +15,7 @@ public class Game{
 		this.players = new ArrayList<Player>();
 		
 		this.players.add(new Player("blau", 0));
-		this.players.add(new Player("grün", 11));
+		this.players.add(new Player("gr\u00FCn", 11));
 		this.players.add(new Player("rot", 23));
 		this.players.add(new Player("gelb", 35));
 		

@@ -25,21 +25,21 @@ public class View {
 	
 
 	public void getOutputRollDice(){
-		System.out.println("\nBitte Würfeln.");
-		System.out.println("Zum Würfeln bitte 'w' eingeben und mit Enter bestätigen.");
+		System.out.println("\nBitte W\u00FCrfeln.");
+		System.out.println("Zum W\u00FCrfeln bitte 'w' eingeben und mit Enter best\u00E4tigen.");
 	}
 
 	public void getOutputThrownDice(){
-		System.out.println("Du hast eine "+this.model.getCurrentPips()+" gewürfelt.");
+		System.out.println("Du hast eine "+this.model.getCurrentPips()+" gew\u00FCrfelt.");
 	}
 
 	public void getOutputMoveTokenToStartfield(){
-		System.out.println("Glückwunsch, du hast eine 6 gewürfelt! \nwDeine Spielfigur "
+		System.out.println("Gl\u00FCckwunsch, du hast eine 6 gew\u00FCrfelt! \nwDeine Spielfigur "
 				+this.model.getLastPlayer().getColor()+this.model.getLastPlayer().getLastMovedToken() +" ist nun im Spiel");
 	}
 	
 	public void getOutputRollDiceAgain(){
-		System.out.println("Du hast keine 6 gewürfelt und darfst noch "+model.numberOfThrowsLeft()+"-mal nachwürfeln.");
+		System.out.println("Du hast keine 6 gew\u00FCrfelt und darfst noch "+model.numberOfThrowsLeft()+"-mal nachw\u00FCrfeln.");
 		System.out.println("--------------------------------------------------------------");
 	}
 	
@@ -50,20 +50,20 @@ public class View {
 			System.out.println(this.model.getCurrentPlayer().getColor()+" "+token.getIndex()+" --> " +this.model.calculateDestination(token, this.model.getCurrentPips()));
 
 		}
-		System.out.println("Bitte gebe die Nummer der Figur ein und bestätige mit Enter");
+		System.out.println("Bitte gebe die Nummer der Figur ein und best\u00E4tige mit Enter");
 	}
 	
 	public void getOutputMoveFigure() {
 		System.out.println("Du darfst ziehen.");
-		System.out.println("Zum Ziehen bitte 'z' eingeben und mit Enter bestätigen.");
+		System.out.println("Zum Ziehen bitte 'z' eingeben und mit Enter best\u00E4tigen.");
 	}
 
 	public void getOutputSorryMessage(){
-		System.out.println("Du hast leider 3-mal keine 6 gewürfelt.\n");
+		System.out.println("Du hast leider 3-mal keine 6 gew\u00FCrfelt.\n");
 	}
 
 	public void getOutputInvalidInput(){
-		System.out.println("Deine Eingabe war ungültig.\nBitte versuche es noch einmal.");
+		System.out.println("Deine Eingabe war ung\u00FCltig.\nBitte versuche es noch einmal.");
 	}
 	
 	public void getOutputMoveSuccess(){
@@ -76,7 +76,7 @@ public class View {
 		System.out.println("--------------------------------------------------------------\n");
 		System.out.println("Status Spielfeld:");
 		for (Player player : model.getPlayers()) {
-			System.out.println(player.getColor()+"\t"+player.getNumberOfTokenInField()+ " von "+ player.getStoreSize() + " Figuren im Spiel: ");
+			System.out.println(player.getColor()+"\t"+player.getNumberOfTokenInField()+ " von "+ player.getStoreSize() + " Figuren im Spiel");
 			for (Token token : player.getTokensOnField()){
 				System.out.println("\tFigur "+token.getIndex()+" steht auf Feld "+token.getIndexOnField());
 			}
